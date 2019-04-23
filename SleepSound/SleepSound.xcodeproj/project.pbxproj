@@ -8,22 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		046BD20C226D769F0016F7C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD20B226D769F0016F7C4 /* AppDelegate.swift */; };
-		046BD20E226D769F0016F7C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD20D226D769F0016F7C4 /* ViewController.swift */; };
-		046BD211226D769F0016F7C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046BD20F226D769F0016F7C4 /* Main.storyboard */; };
-		046BD214226D769F0016F7C4 /* SleepSound.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 046BD212226D769F0016F7C4 /* SleepSound.xcdatamodeld */; };
 		046BD216226D76A00016F7C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046BD215226D76A00016F7C4 /* Assets.xcassets */; };
 		046BD219226D76A00016F7C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046BD217226D76A00016F7C4 /* LaunchScreen.storyboard */; };
+		046BD26B226DA91D0016F7C4 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 046BD26A226DA91D0016F7C4 /* .swiftlint.yml */; };
+		046BD276226E004A0016F7C4 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD275226E004A0016F7C4 /* UIViewController+.swift */; };
+		04B38AB4226E9EDD00CDC29A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B38AB2226E9EDD00CDC29A /* MainViewController.swift */; };
+		04B38AC9226EA48000CDC29A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B38AC8226EA48000CDC29A /* Main.storyboard */; };
+		04B38ACB226EA50400CDC29A /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B38ACA226EA50400CDC29A /* Storyboards.swift */; };
+		EBE7BE501A7DB652FF119830 /* Pods_SleepSound.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58047E95CD23D1336E9C2397 /* Pods_SleepSound.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		046BD208226D769F0016F7C4 /* SleepSound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepSound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		046BD20B226D769F0016F7C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		046BD20D226D769F0016F7C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		046BD210226D769F0016F7C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		046BD213226D769F0016F7C4 /* SleepSound.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SleepSound.xcdatamodel; sourceTree = "<group>"; };
 		046BD215226D76A00016F7C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		046BD218226D76A00016F7C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		046BD21A226D76A00016F7C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		046BD26A226DA91D0016F7C4 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		046BD275226E004A0016F7C4 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		04B38AB2226E9EDD00CDC29A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		04B38AC8226EA48000CDC29A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		04B38ACA226EA50400CDC29A /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		04B38AD1226EC21000CDC29A /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		58047E95CD23D1336E9C2397 /* Pods_SleepSound.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SleepSound.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79A88310730BFF2C3A37C99C /* Pods-SleepSound.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepSound.release.xcconfig"; path = "Pods/Target Support Files/Pods-SleepSound/Pods-SleepSound.release.xcconfig"; sourceTree = "<group>"; };
+		EB3EEF6C2F48A3C4B67A33E2 /* Pods-SleepSound.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepSound.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SleepSound/Pods-SleepSound.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBE7BE501A7DB652FF119830 /* Pods_SleepSound.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +52,8 @@
 			children = (
 				046BD20A226D769F0016F7C4 /* SleepSound */,
 				046BD209226D769F0016F7C4 /* Products */,
+				FAA9F4E833EB0A748A953881 /* Pods */,
+				AF4907665F4DACD799F1320B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +68,116 @@
 		046BD20A226D769F0016F7C4 /* SleepSound */ = {
 			isa = PBXGroup;
 			children = (
-				046BD20B226D769F0016F7C4 /* AppDelegate.swift */,
-				046BD20D226D769F0016F7C4 /* ViewController.swift */,
-				046BD20F226D769F0016F7C4 /* Main.storyboard */,
+				046BD221226D79B10016F7C4 /* App */,
+				046BD222226D79D50016F7C4 /* Extensions */,
+				046BD233226D7A5E0016F7C4 /* Data */,
+				046BD226226D7A5D0016F7C4 /* Scenes */,
+				046BD224226D7A5D0016F7C4 /* Support */,
 				046BD215226D76A00016F7C4 /* Assets.xcassets */,
 				046BD217226D76A00016F7C4 /* LaunchScreen.storyboard */,
 				046BD21A226D76A00016F7C4 /* Info.plist */,
-				046BD212226D769F0016F7C4 /* SleepSound.xcdatamodeld */,
+				046BD26A226DA91D0016F7C4 /* .swiftlint.yml */,
+				04B38AD1226EC21000CDC29A /* Bridging-Header.h */,
 			);
 			path = SleepSound;
+			sourceTree = "<group>";
+		};
+		046BD221226D79B10016F7C4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				046BD20B226D769F0016F7C4 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		046BD222226D79D50016F7C4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				046BD275226E004A0016F7C4 /* UIViewController+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		046BD224226D7A5D0016F7C4 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		046BD226226D7A5D0016F7C4 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				04B38AB6226EA01400CDC29A /* Storyboards */,
+				046BD22C226D7A5D0016F7C4 /* Main */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		046BD22C226D7A5D0016F7C4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				04B38AB2226E9EDD00CDC29A /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		046BD233226D7A5E0016F7C4 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				046BD244226D7A5E0016F7C4 /* Model */,
+				046BD234226D7A5E0016F7C4 /* Source */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		046BD234226D7A5E0016F7C4 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				046BD235226D7A5E0016F7C4 /* Remote */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		046BD235226D7A5E0016F7C4 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		046BD244226D7A5E0016F7C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04B38AB6226EA01400CDC29A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				04B38AC8226EA48000CDC29A /* Main.storyboard */,
+				04B38ACA226EA50400CDC29A /* Storyboards.swift */,
+			);
+			name = Storyboards;
+			path = "../../../../Downloads/PTMVCDemo-master 2/ios-mvc_architect/Scenes/Storyboards";
+			sourceTree = "<group>";
+		};
+		AF4907665F4DACD799F1320B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58047E95CD23D1336E9C2397 /* Pods_SleepSound.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAA9F4E833EB0A748A953881 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB3EEF6C2F48A3C4B67A33E2 /* Pods-SleepSound.debug.xcconfig */,
+				79A88310730BFF2C3A37C99C /* Pods-SleepSound.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +187,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 046BD21D226D76A00016F7C4 /* Build configuration list for PBXNativeTarget "SleepSound" */;
 			buildPhases = (
+				36227F12389C293309C2D4EF /* [CP] Check Pods Manifest.lock */,
 				046BD204226D769F0016F7C4 /* Sources */,
 				046BD205226D769F0016F7C4 /* Frameworks */,
 				046BD206226D769F0016F7C4 /* Resources */,
+				046BD270226DCACB0016F7C4 /* ShellScript */,
+				9CC4314891B4E94C207AE963 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,36 +241,94 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046BD26B226DA91D0016F7C4 /* .swiftlint.yml in Resources */,
 				046BD219226D76A00016F7C4 /* LaunchScreen.storyboard in Resources */,
 				046BD216226D76A00016F7C4 /* Assets.xcassets in Resources */,
-				046BD211226D769F0016F7C4 /* Main.storyboard in Resources */,
+				04B38AC9226EA48000CDC29A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		046BD270226DCACB0016F7C4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		36227F12389C293309C2D4EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SleepSound-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CC4314891B4E94C207AE963 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SleepSound/Pods-SleepSound-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SleepSound/Pods-SleepSound-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		046BD204226D769F0016F7C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				046BD214226D769F0016F7C4 /* SleepSound.xcdatamodeld in Sources */,
-				046BD20E226D769F0016F7C4 /* ViewController.swift in Sources */,
+				04B38ACB226EA50400CDC29A /* Storyboards.swift in Sources */,
+				04B38AB4226E9EDD00CDC29A /* MainViewController.swift in Sources */,
 				046BD20C226D769F0016F7C4 /* AppDelegate.swift in Sources */,
+				046BD276226E004A0016F7C4 /* UIViewController+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		046BD20F226D769F0016F7C4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				046BD210226D769F0016F7C4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		046BD217226D76A00016F7C4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,6 +458,7 @@
 		};
 		046BD21E226D76A00016F7C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB3EEF6C2F48A3C4B67A33E2 /* Pods-SleepSound.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +470,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lamledinh.test.SleepSound;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SleepSound/Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -313,6 +489,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lamledinh.test.SleepSound;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SleepSound/Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -340,19 +517,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		046BD212226D769F0016F7C4 /* SleepSound.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				046BD213226D769F0016F7C4 /* SleepSound.xcdatamodel */,
-			);
-			currentVersion = 046BD213226D769F0016F7C4 /* SleepSound.xcdatamodel */;
-			path = SleepSound.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 046BD200226D769F0016F7C4 /* Project object */;
 }
