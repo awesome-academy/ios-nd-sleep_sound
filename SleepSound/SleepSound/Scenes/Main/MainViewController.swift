@@ -6,9 +6,6 @@
 //  Copyright © 2019 mac. All rights reserved.
 //
 
-import UIKit
-import Reusable
-
 final class MainViewController: UIViewController {
     
     // MARK: - IBOutlets
@@ -31,7 +28,6 @@ final class MainViewController: UIViewController {
     private func configView() {
         
     }
-    
 }
 
 // MARK: - StoryboardSceneBased

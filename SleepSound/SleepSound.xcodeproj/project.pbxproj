@@ -29,6 +29,7 @@
 		04B38AB2226E9EDD00CDC29A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		04B38AC8226EA48000CDC29A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		04B38ACA226EA50400CDC29A /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		04B38AD1226EC21000CDC29A /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		58047E95CD23D1336E9C2397 /* Pods_SleepSound.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SleepSound.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A88310730BFF2C3A37C99C /* Pods-SleepSound.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepSound.release.xcconfig"; path = "Pods/Target Support Files/Pods-SleepSound/Pods-SleepSound.release.xcconfig"; sourceTree = "<group>"; };
 		EB3EEF6C2F48A3C4B67A33E2 /* Pods-SleepSound.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepSound.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SleepSound/Pods-SleepSound.debug.xcconfig"; sourceTree = "<group>"; };
@@ -76,6 +77,7 @@
 				046BD217226D76A00016F7C4 /* LaunchScreen.storyboard */,
 				046BD21A226D76A00016F7C4 /* Info.plist */,
 				046BD26A226DA91D0016F7C4 /* .swiftlint.yml */,
+				04B38AD1226EC21000CDC29A /* Bridging-Header.h */,
 			);
 			path = SleepSound;
 			sourceTree = "<group>";
@@ -468,6 +470,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lamledinh.test.SleepSound;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SleepSound/Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -487,6 +490,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lamledinh.test.SleepSound;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SleepSound/Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
