@@ -21,16 +21,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="81m-Wk-xRJ">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moon" translatesAutoresizingMaskIntoConstraints="NO" id="0qb-u4-abS">
-                                <rect key="frame" x="87.5" y="243.5" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="HKS-82-jNW"/>
-                                    <constraint firstAttribute="width" constant="200" id="sUw-um-b2q"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moon" translatesAutoresizingMaskIntoConstraints="NO" id="0qb-u4-abS">
+                                <rect key="frame" x="94" y="177" width="187.5" height="333.5"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="0qb-u4-abS" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.5" id="4hb-6J-y8z"/>
+                            <constraint firstItem="0qb-u4-abS" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.5" id="5Of-nw-ndi"/>
                             <constraint firstItem="81m-Wk-xRJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="U7G-UW-mdU"/>
                             <constraint firstItem="81m-Wk-xRJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cR0-CM-zVl"/>
                             <constraint firstItem="0qb-u4-abS" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="dzb-Go-d9d"/>

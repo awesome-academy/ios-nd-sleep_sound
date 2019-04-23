@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0420D6D6226F04BF0035B243 /* AudioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0420D6D5226F04BF0035B243 /* AudioCollectionViewCell.swift */; };
+		0420D6D8226F058D0035B243 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0420D6D7226F058D0035B243 /* Constant.swift */; };
+		0420D6DA226F05E00035B243 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0420D6D9226F05E00035B243 /* UIColor+.swift */; };
+		0420D6DC226F06DF0035B243 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0420D6DB226F06DF0035B243 /* UIImage+.swift */; };
 		046BD20C226D769F0016F7C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD20B226D769F0016F7C4 /* AppDelegate.swift */; };
 		046BD216226D76A00016F7C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046BD215226D76A00016F7C4 /* Assets.xcassets */; };
 		046BD219226D76A00016F7C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046BD217226D76A00016F7C4 /* LaunchScreen.storyboard */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0420D6D5226F04BF0035B243 /* AudioCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCollectionViewCell.swift; sourceTree = "<group>"; };
+		0420D6D7226F058D0035B243 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		0420D6D9226F05E00035B243 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		0420D6DB226F06DF0035B243 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		046BD208226D769F0016F7C4 /* SleepSound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepSound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		046BD20B226D769F0016F7C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		046BD215226D76A00016F7C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0420D6D4226F049E0035B243 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0420D6D5226F04BF0035B243 /* AudioCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		046BD1FF226D769F0016F7C4 = {
 			isa = PBXGroup;
 			children = (
@@ -70,9 +86,9 @@
 			children = (
 				046BD221226D79B10016F7C4 /* App */,
 				046BD222226D79D50016F7C4 /* Extensions */,
+				046BD224226D7A5D0016F7C4 /* Support */,
 				046BD233226D7A5E0016F7C4 /* Data */,
 				046BD226226D7A5D0016F7C4 /* Scenes */,
-				046BD224226D7A5D0016F7C4 /* Support */,
 				046BD215226D76A00016F7C4 /* Assets.xcassets */,
 				046BD217226D76A00016F7C4 /* LaunchScreen.storyboard */,
 				046BD21A226D76A00016F7C4 /* Info.plist */,
@@ -94,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				046BD275226E004A0016F7C4 /* UIViewController+.swift */,
+				0420D6D9226F05E00035B243 /* UIColor+.swift */,
+				0420D6DB226F06DF0035B243 /* UIImage+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -101,6 +119,7 @@
 		046BD224226D7A5D0016F7C4 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				0420D6D7226F058D0035B243 /* Constant.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -117,6 +136,7 @@
 		046BD22C226D7A5D0016F7C4 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				0420D6D4226F049E0035B243 /* Cell */,
 				04B38AB2226E9EDD00CDC29A /* MainViewController.swift */,
 			);
 			path = Main;
@@ -323,6 +343,10 @@
 				04B38AB4226E9EDD00CDC29A /* MainViewController.swift in Sources */,
 				046BD20C226D769F0016F7C4 /* AppDelegate.swift in Sources */,
 				046BD276226E004A0016F7C4 /* UIViewController+.swift in Sources */,
+				0420D6D6226F04BF0035B243 /* AudioCollectionViewCell.swift in Sources */,
+				0420D6DC226F06DF0035B243 /* UIImage+.swift in Sources */,
+				0420D6D8226F058D0035B243 /* Constant.swift in Sources */,
+				0420D6DA226F05E00035B243 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
