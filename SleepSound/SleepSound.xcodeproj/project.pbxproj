@@ -19,6 +19,29 @@
 		04F4EB50227001CB0034CEBC /* AudioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4EB4F227001CB0034CEBC /* AudioCollectionViewCell.swift */; };
 		04F4EB53227038100034CEBC /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4EB52227038100034CEBC /* Storyboards.swift */; };
 		04F4EB552270381E0034CEBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F4EB542270381E0034CEBC /* Main.storyboard */; };
+		04F4EB6B22706CD50034CEBC /* Bath.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04F4EB5B22706CD20034CEBC /* Bath.mp3 */; };
+		04F4EB6C22706CD50034CEBC /* Air Conditioner.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04F4EB5C22706CD20034CEBC /* Air Conditioner.mp3 */; };
+		04F4EB6D22706CD50034CEBC /* Carving Wood.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04F4EB5D22706CD30034CEBC /* Carving Wood.mp3 */; };
+		04F4EB6E22706CD50034CEBC /* Brushing Hair.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04F4EB5E22706CD30034CEBC /* Brushing Hair.mp3 */; };
+		04F4EB6F22706CD50034CEBC /* Beer Foam.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04F4EB5F22706CD30034CEBC /* Beer Foam.mp3 */; };
+		04F4EB7022706CD50034CEBC /* Bath Foam.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04F4EB6022706CD30034CEBC /* Bath Foam.mp3 */; };
+		04F4EB7122706CD50034CEBC /* Boiling Water.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04F4EB6122706CD30034CEBC /* Boiling Water.mp3 */; };
+		04F4EB7222706CD50034CEBC /* Crickets.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04F4EB6222706CD30034CEBC /* Crickets.mp3 */; };
+		04F4EB7322706CD50034CEBC /* Blowing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04F4EB6322706CD30034CEBC /* Blowing.mp3 */; };
+		04F4EB7422706CD50034CEBC /* Brewing Coffee.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04F4EB6422706CD30034CEBC /* Brewing Coffee.mp3 */; };
+		04F4EB7522706CD50034CEBC /* Aluminum Foil.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04F4EB6522706CD40034CEBC /* Aluminum Foil.mp3 */; };
+		04F4EB7622706CD50034CEBC /* Chweing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04F4EB6622706CD40034CEBC /* Chweing.mp3 */; };
+		04F4EB7722706CD50034CEBC /* Crackling Fire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04F4EB6722706CD40034CEBC /* Crackling Fire.mp3 */; };
+		04F4EB7822706CD50034CEBC /* Balloons.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04F4EB6822706CD40034CEBC /* Balloons.mp3 */; };
+		04F4EB7922706CD50034CEBC /* Bubble Wrap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04F4EB6922706CD40034CEBC /* Bubble Wrap.mp3 */; };
+		04F4EB7A22706CD50034CEBC /* Book.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04F4EB6A22706CD50034CEBC /* Book.mp3 */; };
+		04F4EB8222706CF20034CEBC /* Arista2.0 Alternate light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04F4EB7E22706CE50034CEBC /* Arista2.0 Alternate light.ttf */; };
+		04F4EB8322706CF40034CEBC /* Arista2.0 light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04F4EB7F22706CE50034CEBC /* Arista2.0 light.ttf */; };
+		04F4EB8422706CF60034CEBC /* Arista2.0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04F4EB7B22706CE50034CEBC /* Arista2.0.ttf */; };
+		04F4EB8522706CF80034CEBC /* Arista2.0Alternate.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04F4EB8122706CE50034CEBC /* Arista2.0Alternate.ttf */; };
+		04F4EB8622706CF90034CEBC /* GOTHIC.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 04F4EB7C22706CE50034CEBC /* GOTHIC.TTF */; };
+		04F4EB8722706CFC0034CEBC /* Panton-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04F4EB7D22706CE50034CEBC /* Panton-LightItalic.otf */; };
+		04F4EB8822706CFE0034CEBC /* Panton-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04F4EB8022706CE50034CEBC /* Panton-Regular.otf */; };
 		EBE7BE501A7DB652FF119830 /* Pods_SleepSound.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58047E95CD23D1336E9C2397 /* Pods_SleepSound.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +61,29 @@
 		04F4EB4F227001CB0034CEBC /* AudioCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioCollectionViewCell.swift; sourceTree = "<group>"; };
 		04F4EB52227038100034CEBC /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		04F4EB542270381E0034CEBC /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		04F4EB5B22706CD20034CEBC /* Bath.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Bath.mp3; sourceTree = "<group>"; };
+		04F4EB5C22706CD20034CEBC /* Air Conditioner.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Air Conditioner.mp3"; sourceTree = "<group>"; };
+		04F4EB5D22706CD30034CEBC /* Carving Wood.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Carving Wood.mp3"; sourceTree = "<group>"; };
+		04F4EB5E22706CD30034CEBC /* Brushing Hair.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Brushing Hair.mp3"; sourceTree = "<group>"; };
+		04F4EB5F22706CD30034CEBC /* Beer Foam.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beer Foam.mp3"; sourceTree = "<group>"; };
+		04F4EB6022706CD30034CEBC /* Bath Foam.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Bath Foam.mp3"; sourceTree = "<group>"; };
+		04F4EB6122706CD30034CEBC /* Boiling Water.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Boiling Water.mp3"; sourceTree = "<group>"; };
+		04F4EB6222706CD30034CEBC /* Crickets.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Crickets.mp3; sourceTree = "<group>"; };
+		04F4EB6322706CD30034CEBC /* Blowing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Blowing.mp3; sourceTree = "<group>"; };
+		04F4EB6422706CD30034CEBC /* Brewing Coffee.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Brewing Coffee.mp3"; sourceTree = "<group>"; };
+		04F4EB6522706CD40034CEBC /* Aluminum Foil.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Aluminum Foil.mp3"; sourceTree = "<group>"; };
+		04F4EB6622706CD40034CEBC /* Chweing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Chweing.mp3; sourceTree = "<group>"; };
+		04F4EB6722706CD40034CEBC /* Crackling Fire.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Crackling Fire.mp3"; sourceTree = "<group>"; };
+		04F4EB6822706CD40034CEBC /* Balloons.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Balloons.mp3; sourceTree = "<group>"; };
+		04F4EB6922706CD40034CEBC /* Bubble Wrap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Bubble Wrap.mp3"; sourceTree = "<group>"; };
+		04F4EB6A22706CD50034CEBC /* Book.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Book.mp3; sourceTree = "<group>"; };
+		04F4EB7B22706CE50034CEBC /* Arista2.0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Arista2.0.ttf; sourceTree = "<group>"; };
+		04F4EB7C22706CE50034CEBC /* GOTHIC.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = GOTHIC.TTF; sourceTree = "<group>"; };
+		04F4EB7D22706CE50034CEBC /* Panton-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-LightItalic.otf"; sourceTree = "<group>"; };
+		04F4EB7E22706CE50034CEBC /* Arista2.0 Alternate light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arista2.0 Alternate light.ttf"; sourceTree = "<group>"; };
+		04F4EB7F22706CE50034CEBC /* Arista2.0 light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arista2.0 light.ttf"; sourceTree = "<group>"; };
+		04F4EB8022706CE50034CEBC /* Panton-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-Regular.otf"; sourceTree = "<group>"; };
+		04F4EB8122706CE50034CEBC /* Arista2.0Alternate.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Arista2.0Alternate.ttf; sourceTree = "<group>"; };
 		58047E95CD23D1336E9C2397 /* Pods_SleepSound.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SleepSound.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A88310730BFF2C3A37C99C /* Pods-SleepSound.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepSound.release.xcconfig"; path = "Pods/Target Support Files/Pods-SleepSound/Pods-SleepSound.release.xcconfig"; sourceTree = "<group>"; };
 		EB3EEF6C2F48A3C4B67A33E2 /* Pods-SleepSound.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepSound.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SleepSound/Pods-SleepSound.debug.xcconfig"; sourceTree = "<group>"; };
@@ -76,6 +122,7 @@
 		046BD20A226D769F0016F7C4 /* SleepSound */ = {
 			isa = PBXGroup;
 			children = (
+				04F4EB5822706CA80034CEBC /* Resources */,
 				046BD221226D79B10016F7C4 /* App */,
 				046BD222226D79D50016F7C4 /* Extensions */,
 				046BD233226D7A5E0016F7C4 /* Data */,
@@ -182,6 +229,52 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		04F4EB5822706CA80034CEBC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04F4EB5A22706CB90034CEBC /* Fonts */,
+				04F4EB5922706CB00034CEBC /* Sounds */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		04F4EB5922706CB00034CEBC /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				04F4EB5C22706CD20034CEBC /* Air Conditioner.mp3 */,
+				04F4EB6522706CD40034CEBC /* Aluminum Foil.mp3 */,
+				04F4EB6822706CD40034CEBC /* Balloons.mp3 */,
+				04F4EB6022706CD30034CEBC /* Bath Foam.mp3 */,
+				04F4EB5B22706CD20034CEBC /* Bath.mp3 */,
+				04F4EB5F22706CD30034CEBC /* Beer Foam.mp3 */,
+				04F4EB6322706CD30034CEBC /* Blowing.mp3 */,
+				04F4EB6122706CD30034CEBC /* Boiling Water.mp3 */,
+				04F4EB6A22706CD50034CEBC /* Book.mp3 */,
+				04F4EB6422706CD30034CEBC /* Brewing Coffee.mp3 */,
+				04F4EB5E22706CD30034CEBC /* Brushing Hair.mp3 */,
+				04F4EB6922706CD40034CEBC /* Bubble Wrap.mp3 */,
+				04F4EB5D22706CD30034CEBC /* Carving Wood.mp3 */,
+				04F4EB6622706CD40034CEBC /* Chweing.mp3 */,
+				04F4EB6722706CD40034CEBC /* Crackling Fire.mp3 */,
+				04F4EB6222706CD30034CEBC /* Crickets.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		04F4EB5A22706CB90034CEBC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				04F4EB7E22706CE50034CEBC /* Arista2.0 Alternate light.ttf */,
+				04F4EB7F22706CE50034CEBC /* Arista2.0 light.ttf */,
+				04F4EB7B22706CE50034CEBC /* Arista2.0.ttf */,
+				04F4EB8122706CE50034CEBC /* Arista2.0Alternate.ttf */,
+				04F4EB7C22706CE50034CEBC /* GOTHIC.TTF */,
+				04F4EB7D22706CE50034CEBC /* Panton-LightItalic.otf */,
+				04F4EB8022706CE50034CEBC /* Panton-Regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		AF4907665F4DACD799F1320B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,10 +353,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F4EB7422706CD50034CEBC /* Brewing Coffee.mp3 in Resources */,
 				046BD26B226DA91D0016F7C4 /* .swiftlint.yml in Resources */,
+				04F4EB8622706CF90034CEBC /* GOTHIC.TTF in Resources */,
+				04F4EB7522706CD50034CEBC /* Aluminum Foil.mp3 in Resources */,
+				04F4EB7322706CD50034CEBC /* Blowing.mp3 in Resources */,
+				04F4EB6F22706CD50034CEBC /* Beer Foam.mp3 in Resources */,
+				04F4EB7222706CD50034CEBC /* Crickets.mp3 in Resources */,
+				04F4EB7922706CD50034CEBC /* Bubble Wrap.mp3 in Resources */,
+				04F4EB6C22706CD50034CEBC /* Air Conditioner.mp3 in Resources */,
 				04F4EB552270381E0034CEBC /* Main.storyboard in Resources */,
+				04F4EB6B22706CD50034CEBC /* Bath.mp3 in Resources */,
 				046BD219226D76A00016F7C4 /* LaunchScreen.storyboard in Resources */,
+				04F4EB8322706CF40034CEBC /* Arista2.0 light.ttf in Resources */,
+				04F4EB6E22706CD50034CEBC /* Brushing Hair.mp3 in Resources */,
+				04F4EB7022706CD50034CEBC /* Bath Foam.mp3 in Resources */,
+				04F4EB8522706CF80034CEBC /* Arista2.0Alternate.ttf in Resources */,
 				046BD216226D76A00016F7C4 /* Assets.xcassets in Resources */,
+				04F4EB7122706CD50034CEBC /* Boiling Water.mp3 in Resources */,
+				04F4EB7622706CD50034CEBC /* Chweing.mp3 in Resources */,
+				04F4EB8422706CF60034CEBC /* Arista2.0.ttf in Resources */,
+				04F4EB6D22706CD50034CEBC /* Carving Wood.mp3 in Resources */,
+				04F4EB7A22706CD50034CEBC /* Book.mp3 in Resources */,
+				04F4EB8222706CF20034CEBC /* Arista2.0 Alternate light.ttf in Resources */,
+				04F4EB8822706CFE0034CEBC /* Panton-Regular.otf in Resources */,
+				04F4EB7822706CD50034CEBC /* Balloons.mp3 in Resources */,
+				04F4EB8722706CFC0034CEBC /* Panton-LightItalic.otf in Resources */,
+				04F4EB7722706CD50034CEBC /* Crackling Fire.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
