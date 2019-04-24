@@ -14,9 +14,8 @@
 		046BD276226E004A0016F7C4 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD275226E004A0016F7C4 /* UIViewController+.swift */; };
 		04B38AB4226E9EDD00CDC29A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B38AB2226E9EDD00CDC29A /* MainViewController.swift */; };
 		04F4EB49227000DF0034CEBC /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4EB46227000DF0034CEBC /* String+.swift */; };
-		04F4EB4A227000DF0034CEBC /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4EB47227000DF0034CEBC /* UIColor+.swift */; };
 		04F4EB4B227000DF0034CEBC /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4EB48227000DF0034CEBC /* UIImage+.swift */; };
-		04F4EB4D227001B70034CEBC /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4EB4C227001B70034CEBC /* Constant.swift */; };
+		04F4EB4D227001B70034CEBC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4EB4C227001B70034CEBC /* Constants.swift */; };
 		04F4EB50227001CB0034CEBC /* AudioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4EB4F227001CB0034CEBC /* AudioCollectionViewCell.swift */; };
 		04F4EB53227038100034CEBC /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4EB52227038100034CEBC /* Storyboards.swift */; };
 		04F4EB552270381E0034CEBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F4EB542270381E0034CEBC /* Main.storyboard */; };
@@ -34,9 +33,8 @@
 		04B38AB2226E9EDD00CDC29A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		04B38AD1226EC21000CDC29A /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		04F4EB46227000DF0034CEBC /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
-		04F4EB47227000DF0034CEBC /* UIColor+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		04F4EB48227000DF0034CEBC /* UIImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
-		04F4EB4C227001B70034CEBC /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		04F4EB4C227001B70034CEBC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		04F4EB4F227001CB0034CEBC /* AudioCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioCollectionViewCell.swift; sourceTree = "<group>"; };
 		04F4EB52227038100034CEBC /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		04F4EB542270381E0034CEBC /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -105,7 +103,6 @@
 			children = (
 				046BD275226E004A0016F7C4 /* UIViewController+.swift */,
 				04F4EB46227000DF0034CEBC /* String+.swift */,
-				04F4EB47227000DF0034CEBC /* UIColor+.swift */,
 				04F4EB48227000DF0034CEBC /* UIImage+.swift */,
 			);
 			path = Extensions;
@@ -114,7 +111,7 @@
 		046BD224226D7A5D0016F7C4 /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				04F4EB4C227001B70034CEBC /* Constant.swift */,
+				04F4EB4C227001B70034CEBC /* Constants.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -343,13 +340,12 @@
 			files = (
 				04F4EB4B227000DF0034CEBC /* UIImage+.swift in Sources */,
 				04B38AB4226E9EDD00CDC29A /* MainViewController.swift in Sources */,
-				04F4EB4D227001B70034CEBC /* Constant.swift in Sources */,
+				04F4EB4D227001B70034CEBC /* Constants.swift in Sources */,
 				04F4EB49227000DF0034CEBC /* String+.swift in Sources */,
 				04F4EB50227001CB0034CEBC /* AudioCollectionViewCell.swift in Sources */,
 				04F4EB53227038100034CEBC /* Storyboards.swift in Sources */,
 				046BD20C226D769F0016F7C4 /* AppDelegate.swift in Sources */,
 				046BD276226E004A0016F7C4 /* UIViewController+.swift in Sources */,
-				04F4EB4A227000DF0034CEBC /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

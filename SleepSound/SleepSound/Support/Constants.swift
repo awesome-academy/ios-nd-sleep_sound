@@ -6,7 +6,7 @@
 //  Copyright © 2019 mac. All rights reserved.
 //
 
-enum Constant {
+enum Constants {
     static let arrAudioNameList = ["Air Conditioner",
                                    "Aluminum Foil",
                                    "Balloons",
@@ -24,6 +24,5 @@ enum Constant {
                                    "Crackling Fire",
                                    "Crickets"]
     
-    static let kColorSelected = UIColor("b4d27e")
+    static let fillColor = UIColor(red: 180 / 255, green: 210 / 255, blue: 126 / 255, alpha: 1)
 }
-

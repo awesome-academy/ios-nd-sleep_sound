@@ -99,7 +99,7 @@
                                         <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <outlet property="delegate" destination="vlQ-Ou-j81" id="ZhU-gT-TL6"/>
+                                            <outlet property="delegate" destination="LzZ-HI-1TI" id="Phb-fH-OnG"/>
                                         </connections>
                                     </searchBar>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="D1g-AD-V7z">
@@ -143,7 +143,7 @@
                                                                     <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <color key="thumbTintColor" red="0.70588235290000001" green="0.82352941180000006" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <connections>
-                                                                        <action selector="valueChanged:" destination="b0m-T1-61Q" eventType="valueChanged" id="2g8-6P-3Tm"/>
+                                                                        <action selector="valueChanged:" destination="b0m-T1-61Q" eventType="valueChanged" id="qIk-yG-NSU"/>
                                                                     </connections>
                                                                 </slider>
                                                             </subviews>
@@ -173,9 +173,9 @@
                                                 <viewLayoutGuide key="safeArea" id="s31-tJ-S8B"/>
                                                 <size key="customSize" width="150" height="150"/>
                                                 <connections>
-                                                    <outlet property="imageAudio" destination="DVi-gb-UKg" id="jNU-p9-ZuK"/>
-                                                    <outlet property="lbNameAudio" destination="nmJ-pA-wPK" id="hnf-Zg-Nvg"/>
-                                                    <outlet property="sliderVolumeAudio" destination="g2Z-5z-iBi" id="yns-Kz-9gn"/>
+                                                    <outlet property="audioImageView" destination="DVi-gb-UKg" id="KsI-A3-HQQ"/>
+                                                    <outlet property="audioNameLabel" destination="nmJ-pA-wPK" id="QRB-l6-eCa"/>
+                                                    <outlet property="volumeSlider" destination="g2Z-5z-iBi" id="2fi-Ui-gxq"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
@@ -220,9 +220,9 @@
                         <viewLayoutGuide key="safeArea" id="2vH-JM-fD1"/>
                     </view>
                     <connections>
-                        <outlet property="btnMixer" destination="Rik-1m-EcM" id="z5t-bY-u0Q"/>
-                        <outlet property="collectionViewListAudio" destination="D1g-AD-V7z" id="pf6-PJ-8AQ"/>
-                        <outlet property="searchBar" destination="XtY-9w-cBt" id="bYC-1E-u68"/>
+                        <outlet property="audioCollectionView" destination="D1g-AD-V7z" id="HsE-b8-cEg"/>
+                        <outlet property="audioSearchBar" destination="XtY-9w-cBt" id="TK4-el-h0g"/>
+                        <outlet property="mixerButton" destination="Rik-1m-EcM" id="N5m-L2-yjq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B0f-g7-lwl" userLabel="First Responder" sceneMemberID="firstResponder"/>

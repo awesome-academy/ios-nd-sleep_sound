@@ -6,25 +6,25 @@
 //  Copyright © 2019 mac. All rights reserved.
 //
 
-final class AudioCollectionViewCell: UICollectionViewCell, Reusable{
+final class AudioCollectionViewCell: UICollectionViewCell, Reusable {
     
-    @IBOutlet private weak var imageAudio: UIImageView!
-    @IBOutlet private weak var lbNameAudio: UILabel!
-    @IBOutlet private weak var sliderVolumeAudio: UISlider!
+    @IBOutlet private weak var audioImageView: UIImageView!
+    @IBOutlet private weak var audioNameLabel: UILabel!
+    @IBOutlet private weak var volumeSlider: UISlider!
     
-    var sliderChanged = { (value: Float) -> Void in }
+    var sliderChanged: ((Float) -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
     @IBAction func valueChanged(_ sender: UISlider) {
-        sliderChanged(sender.value)
+        sliderChanged?(sender.value)
     }
     
-    func config(text: String, textColor: UIColor, image: UIImage) {
-        lbNameAudio.text = text
-        lbNameAudio.textColor = textColor
-        imageAudio.image = image.imageWithColor(newColor: Constant.kColorSelected)
+    func setContentForCell(text: String, textColor: UIColor, image: UIImage) {
+        audioNameLabel.text = text
+        audioNameLabel.textColor = textColor
+        audioImageView.image = image.imageWithColor(newColor: Constants.fillColor)
     }
 }
