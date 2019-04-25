@@ -11,6 +11,7 @@ final class MainViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet private weak var audioSearchBar: UISearchBar!
     @IBOutlet private weak var mixerButton: UIButton!
+    @IBOutlet private weak var playAudioButton: UIButton!
     @IBOutlet private weak var audioCollectionView: UICollectionView!
     
     // MARK: - Properties
@@ -27,6 +28,12 @@ final class MainViewController: UIViewController {
     }
     
     // MARK: - Methods
+    @IBAction func playAudioButtonTapped(_ sender: Any) {
+        playAudioButton.isSelected = !playAudioButton.isSelected
+    }
+    
+    @IBAction func randomButtonTapped(_ sender: Any) {
+    }
     
     private func configView() {
         mixerButton.setImage(UIImage(named: "mixer.png")?

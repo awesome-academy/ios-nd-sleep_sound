@@ -9,6 +9,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Arista2.0.ttf">
+            <string>Arista2.0</string>
+        </array>
+        <array key="Panton-Regular.otf">
+            <string>Panton-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Main View Controller-->
         <scene sceneID="2G2-5M-4sZ">
@@ -28,6 +36,11 @@
                                     <constraint firstAttribute="height" constant="50" id="n0i-86-YHC"/>
                                 </constraints>
                                 <state key="normal" image="star_selected"/>
+                                <connections>
+                                    <segue destination="tqi-Zb-Rg4" kind="popoverPresentation" popoverAnchorView="kNQ-fa-ohD" id="Wae-bU-1eH">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2p-3D-94T">
                                 <rect key="frame" x="20" y="30" width="50" height="50"/>
@@ -36,6 +49,9 @@
                                     <constraint firstAttribute="width" constant="50" id="jkM-Mf-3BJ"/>
                                 </constraints>
                                 <state key="normal" image="random"/>
+                                <connections>
+                                    <action selector="randomButtonTapped:" destination="vlQ-Ou-j81" eventType="touchUpInside" id="8E2-qc-ktn"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:09" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2es-Dp-L5R">
                                 <rect key="frame" x="112.5" y="40" width="150" height="30"/>
@@ -57,6 +73,11 @@
                                             <constraint firstAttribute="width" constant="60" id="wmq-na-6Hw"/>
                                         </constraints>
                                         <state key="normal" image="timer"/>
+                                        <connections>
+                                            <segue destination="6LE-9R-Tqr" kind="popoverPresentation" popoverAnchorView="VOz-TG-kYY" id="5qD-Ac-C9o">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBk-9I-WlL">
                                         <rect key="frame" x="142.5" y="5" width="70" height="70"/>
@@ -66,6 +87,9 @@
                                         </constraints>
                                         <state key="normal" image="play"/>
                                         <state key="selected" image="pause"/>
+                                        <connections>
+                                            <action selector="playAudioButtonTapped:" destination="vlQ-Ou-j81" eventType="touchUpInside" id="rNl-Ae-xmZ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rik-1m-EcM">
                                         <rect key="frame" x="285" y="15" width="50" height="50"/>
@@ -74,6 +98,11 @@
                                             <constraint firstAttribute="height" constant="50" id="cXT-6u-eVc"/>
                                         </constraints>
                                         <state key="normal" image="mixer"/>
+                                        <connections>
+                                            <segue destination="Orx-jP-u9R" kind="popoverPresentation" popoverAnchorView="Rik-1m-EcM" id="uXh-Yn-YfG">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -134,7 +163,7 @@
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="20" id="3gY-Rh-LhY"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                                    <fontDescription key="fontDescription" name="Panton-Regular" family="Panton" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -223,20 +252,163 @@
                         <outlet property="audioCollectionView" destination="D1g-AD-V7z" id="HsE-b8-cEg"/>
                         <outlet property="audioSearchBar" destination="XtY-9w-cBt" id="TK4-el-h0g"/>
                         <outlet property="mixerButton" destination="Rik-1m-EcM" id="N5m-L2-yjq"/>
+                        <outlet property="playAudioButton" destination="GBk-9I-WlL" id="LFa-FE-lpT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B0f-g7-lwl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="649" y="-150"/>
+            <point key="canvasLocation" x="450" y="-589"/>
+        </scene>
+        <!--Timers View Controller-->
+        <scene sceneID="zFE-AV-9F8">
+            <objects>
+                <viewController storyboardIdentifier="TimersViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6LE-9R-Tqr" customClass="TimersViewController" customModule="SleepSound" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PPN-tv-st7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="WeY-i3-q6r">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIMERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsC-0j-Ys0">
+                                <rect key="frame" x="142.5" y="70" width="90.5" height="36"/>
+                                <fontDescription key="fontDescription" name="Arista2.0" family="Arista 2.0" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tc-Wo-gpj">
+                                <rect key="frame" x="330" y="40" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="lng-J7-9Kk"/>
+                                    <constraint firstAttribute="height" constant="25" id="nJm-DS-M3v"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="6LE-9R-Tqr" eventType="touchUpInside" id="p8T-e2-rHx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qsC-0j-Ys0" firstAttribute="centerX" secondItem="8Jw-sm-aim" secondAttribute="centerX" id="Bsf-ma-TyQ"/>
+                            <constraint firstItem="WeY-i3-q6r" firstAttribute="top" secondItem="8Jw-sm-aim" secondAttribute="top" id="LID-RO-TNX"/>
+                            <constraint firstItem="1tc-Wo-gpj" firstAttribute="top" secondItem="8Jw-sm-aim" secondAttribute="top" constant="20" id="M7t-8L-f0v"/>
+                            <constraint firstItem="qsC-0j-Ys0" firstAttribute="top" secondItem="8Jw-sm-aim" secondAttribute="top" constant="50" id="RAd-mq-wEp"/>
+                            <constraint firstItem="8Jw-sm-aim" firstAttribute="trailing" secondItem="1tc-Wo-gpj" secondAttribute="trailing" constant="20" id="e3k-sV-VNi"/>
+                            <constraint firstItem="WeY-i3-q6r" firstAttribute="leading" secondItem="8Jw-sm-aim" secondAttribute="leading" id="hge-lo-7JC"/>
+                            <constraint firstItem="WeY-i3-q6r" firstAttribute="bottom" secondItem="8Jw-sm-aim" secondAttribute="bottom" id="rYk-ZZ-G4i"/>
+                            <constraint firstItem="WeY-i3-q6r" firstAttribute="trailing" secondItem="8Jw-sm-aim" secondAttribute="trailing" id="z5f-Cg-c9c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8Jw-sm-aim"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KUX-3s-ecq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-127" y="179"/>
+        </scene>
+        <!--Favourite View Controller-->
+        <scene sceneID="RlZ-cx-qjY">
+            <objects>
+                <viewController storyboardIdentifier="FavouriteViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tqi-Zb-Rg4" customClass="FavouriteViewController" customModule="SleepSound" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H4z-QN-5dx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="1Bc-Fp-Xnn">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FAVOURITE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wrs-Ca-t9g">
+                                <rect key="frame" x="122" y="70" width="131" height="36"/>
+                                <fontDescription key="fontDescription" name="Arista2.0" family="Arista 2.0" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQN-vm-aSD">
+                                <rect key="frame" x="330" y="40" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="6OU-WS-fWg"/>
+                                    <constraint firstAttribute="width" constant="25" id="rmJ-fV-khI"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="tqi-Zb-Rg4" eventType="touchUpInside" id="v6a-lI-oZh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1Bc-Fp-Xnn" firstAttribute="leading" secondItem="fpJ-UI-WXZ" secondAttribute="leading" id="5oG-RE-1lP"/>
+                            <constraint firstItem="fpJ-UI-WXZ" firstAttribute="bottom" secondItem="1Bc-Fp-Xnn" secondAttribute="bottom" id="9U4-nq-jPh"/>
+                            <constraint firstItem="Wrs-Ca-t9g" firstAttribute="top" secondItem="fpJ-UI-WXZ" secondAttribute="top" constant="50" id="JIK-9Z-hjP"/>
+                            <constraint firstItem="1Bc-Fp-Xnn" firstAttribute="top" secondItem="fpJ-UI-WXZ" secondAttribute="top" id="QDC-GJ-j1d"/>
+                            <constraint firstItem="fpJ-UI-WXZ" firstAttribute="trailing" secondItem="1Bc-Fp-Xnn" secondAttribute="trailing" id="oFH-RO-SQj"/>
+                            <constraint firstItem="ZQN-vm-aSD" firstAttribute="top" secondItem="fpJ-UI-WXZ" secondAttribute="top" constant="20" id="qTs-Hr-MZ6"/>
+                            <constraint firstItem="fpJ-UI-WXZ" firstAttribute="trailing" secondItem="ZQN-vm-aSD" secondAttribute="trailing" constant="20" id="rpC-4D-w1m"/>
+                            <constraint firstItem="Wrs-Ca-t9g" firstAttribute="centerX" secondItem="fpJ-UI-WXZ" secondAttribute="centerX" id="uJZ-iE-nnR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fpJ-UI-WXZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="otg-Hl-f50" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1492" y="-590"/>
+        </scene>
+        <!--Mixers View Controller-->
+        <scene sceneID="noO-Zt-YD8">
+            <objects>
+                <viewController storyboardIdentifier="MixersViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Orx-jP-u9R" customClass="MixersViewController" customModule="SleepSound" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J8W-lX-ltG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="BdT-Ic-oJN">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MIXERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eg7-W6-y57">
+                                <rect key="frame" x="142" y="70" width="91.5" height="36"/>
+                                <fontDescription key="fontDescription" name="Arista2.0" family="Arista 2.0" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVR-CM-tIR">
+                                <rect key="frame" x="330" y="40" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="giQ-za-mfR"/>
+                                    <constraint firstAttribute="height" constant="25" id="sG6-52-09w"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="Orx-jP-u9R" eventType="touchUpInside" id="5nf-2V-8I0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="29K-vf-ubV" firstAttribute="trailing" secondItem="BVR-CM-tIR" secondAttribute="trailing" constant="20" id="0fa-MN-CuE"/>
+                            <constraint firstItem="29K-vf-ubV" firstAttribute="leading" secondItem="BdT-Ic-oJN" secondAttribute="leading" id="3LU-i5-Usj"/>
+                            <constraint firstItem="eg7-W6-y57" firstAttribute="top" secondItem="29K-vf-ubV" secondAttribute="top" constant="50" id="8Xl-Ju-TtP"/>
+                            <constraint firstItem="29K-vf-ubV" firstAttribute="trailing" secondItem="BdT-Ic-oJN" secondAttribute="trailing" id="AP1-7q-gGp"/>
+                            <constraint firstItem="29K-vf-ubV" firstAttribute="bottom" secondItem="BdT-Ic-oJN" secondAttribute="bottom" id="IOB-hN-DLv"/>
+                            <constraint firstItem="29K-vf-ubV" firstAttribute="top" secondItem="BdT-Ic-oJN" secondAttribute="top" id="OwT-sz-WqI"/>
+                            <constraint firstItem="BVR-CM-tIR" firstAttribute="top" secondItem="29K-vf-ubV" secondAttribute="top" constant="20" id="fwS-wI-QB5"/>
+                            <constraint firstItem="eg7-W6-y57" firstAttribute="centerX" secondItem="29K-vf-ubV" secondAttribute="centerX" id="hgd-hV-yNO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="29K-vf-ubV"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aeb-LV-EMz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="994" y="179"/>
         </scene>
     </scenes>
     <resources>
         <image name="background" width="414" height="896"/>
-        <image name="mixer" width="16" height="16"/>
-        <image name="pause" width="16" height="16"/>
-        <image name="play" width="16" height="16"/>
-        <image name="random" width="16" height="16"/>
-        <image name="star_selected" width="16" height="16"/>
-        <image name="timer" width="16" height="16"/>
+        <image name="close" width="20.71232795715332" height="20.71232795715332"/>
+        <image name="mixer" width="171" height="171"/>
+        <image name="pause" width="58.593105316162109" height="58.593105316162109"/>
+        <image name="play" width="58.593105316162109" height="58.593105316162109"/>
+        <image name="random" width="45.186206817626953" height="45.186206817626953"/>
+        <image name="star_selected" width="22.684930801391602" height="21.351724624633789"/>
+        <image name="timer" width="46" height="46"/>
     </resources>
 </document>

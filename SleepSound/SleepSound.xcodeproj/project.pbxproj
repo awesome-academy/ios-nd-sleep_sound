@@ -42,6 +42,9 @@
 		04F4EB8622706CF90034CEBC /* GOTHIC.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 04F4EB7C22706CE50034CEBC /* GOTHIC.TTF */; };
 		04F4EB8722706CFC0034CEBC /* Panton-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04F4EB7D22706CE50034CEBC /* Panton-LightItalic.otf */; };
 		04F4EB8822706CFE0034CEBC /* Panton-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04F4EB8022706CE50034CEBC /* Panton-Regular.otf */; };
+		04F9950C227141600038DC13 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9950B227141600038DC13 /* FavouriteViewController.swift */; };
+		04F9950E227141710038DC13 /* MixersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9950D227141710038DC13 /* MixersViewController.swift */; };
+		04F99511227141810038DC13 /* TimersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9950F227141800038DC13 /* TimersViewController.swift */; };
 		EBE7BE501A7DB652FF119830 /* Pods_SleepSound.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58047E95CD23D1336E9C2397 /* Pods_SleepSound.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +87,9 @@
 		04F4EB7F22706CE50034CEBC /* Arista2.0 light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arista2.0 light.ttf"; sourceTree = "<group>"; };
 		04F4EB8022706CE50034CEBC /* Panton-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-Regular.otf"; sourceTree = "<group>"; };
 		04F4EB8122706CE50034CEBC /* Arista2.0Alternate.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Arista2.0Alternate.ttf; sourceTree = "<group>"; };
+		04F9950B227141600038DC13 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
+		04F9950D227141710038DC13 /* MixersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixersViewController.swift; sourceTree = "<group>"; };
+		04F9950F227141800038DC13 /* TimersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimersViewController.swift; sourceTree = "<group>"; };
 		58047E95CD23D1336E9C2397 /* Pods_SleepSound.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SleepSound.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A88310730BFF2C3A37C99C /* Pods-SleepSound.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepSound.release.xcconfig"; path = "Pods/Target Support Files/Pods-SleepSound/Pods-SleepSound.release.xcconfig"; sourceTree = "<group>"; };
 		EB3EEF6C2F48A3C4B67A33E2 /* Pods-SleepSound.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepSound.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SleepSound/Pods-SleepSound.debug.xcconfig"; sourceTree = "<group>"; };
@@ -168,6 +174,9 @@
 			children = (
 				04F4EB51227037FC0034CEBC /* Storyboards */,
 				046BD22C226D7A5D0016F7C4 /* Main */,
+				04F9950A227141200038DC13 /* Favourite */,
+				04F99509227141160038DC13 /* Mixers */,
+				04F995082271410C0038DC13 /* Timers */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -273,6 +282,30 @@
 				04F4EB8022706CE50034CEBC /* Panton-Regular.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		04F995082271410C0038DC13 /* Timers */ = {
+			isa = PBXGroup;
+			children = (
+				04F9950F227141800038DC13 /* TimersViewController.swift */,
+			);
+			path = Timers;
+			sourceTree = "<group>";
+		};
+		04F99509227141160038DC13 /* Mixers */ = {
+			isa = PBXGroup;
+			children = (
+				04F9950D227141710038DC13 /* MixersViewController.swift */,
+			);
+			path = Mixers;
+			sourceTree = "<group>";
+		};
+		04F9950A227141200038DC13 /* Favourite */ = {
+			isa = PBXGroup;
+			children = (
+				04F9950B227141600038DC13 /* FavouriteViewController.swift */,
+			);
+			path = Favourite;
 			sourceTree = "<group>";
 		};
 		AF4907665F4DACD799F1320B /* Frameworks */ = {
@@ -455,10 +488,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				04F4EB4B227000DF0034CEBC /* UIImage+.swift in Sources */,
+				04F99511227141810038DC13 /* TimersViewController.swift in Sources */,
 				04B38AB4226E9EDD00CDC29A /* MainViewController.swift in Sources */,
 				04F4EB4D227001B70034CEBC /* Constants.swift in Sources */,
 				04F4EB49227000DF0034CEBC /* String+.swift in Sources */,
+				04F9950C227141600038DC13 /* FavouriteViewController.swift in Sources */,
 				04F4EB50227001CB0034CEBC /* AudioCollectionViewCell.swift in Sources */,
+				04F9950E227141710038DC13 /* MixersViewController.swift in Sources */,
 				04F4EB53227038100034CEBC /* Storyboards.swift in Sources */,
 				046BD20C226D769F0016F7C4 /* AppDelegate.swift in Sources */,
 				046BD276226E004A0016F7C4 /* UIViewController+.swift in Sources */,
