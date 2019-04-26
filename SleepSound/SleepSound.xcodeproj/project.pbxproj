@@ -13,6 +13,18 @@
 		046BD26B226DA91D0016F7C4 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 046BD26A226DA91D0016F7C4 /* .swiftlint.yml */; };
 		046BD276226E004A0016F7C4 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD275226E004A0016F7C4 /* UIViewController+.swift */; };
 		04B38AB4226E9EDD00CDC29A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B38AB2226E9EDD00CDC29A /* MainViewController.swift */; };
+		04C203F022729B720019FA6B /* AudioRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C203EF22729B720019FA6B /* AudioRepository.swift */; };
+		04C203F222729B8E0019FA6B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C203F122729B8E0019FA6B /* Data.swift */; };
+		04C203F422729B980019FA6B /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C203F322729B980019FA6B /* Audio.swift */; };
+		04C203F722729BD60019FA6B /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C203F622729BD60019FA6B /* APIService.swift */; };
+		04C203F922729BE50019FA6B /* APIUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C203F822729BE50019FA6B /* APIUrls.swift */; };
+		04C203FC22729CA60019FA6B /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C203FB22729CA60019FA6B /* BaseRequest.swift */; };
+		04C203FE22729CCF0019FA6B /* AudiosRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C203FD22729CCF0019FA6B /* AudiosRequest.swift */; };
+		04C2040122729D9E0019FA6B /* AudioResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2040022729D9E0019FA6B /* AudioResponse.swift */; };
+		04C2040422729DFC0019FA6B /* CustomRequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2040322729DFC0019FA6B /* CustomRequestAdapter.swift */; };
+		04C2040622729E100019FA6B /* BaseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2040522729E100019FA6B /* BaseResult.swift */; };
+		04C2040922729E2C0019FA6B /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2040822729E2C0019FA6B /* ErrorResponse.swift */; };
+		04C2040B22729E450019FA6B /* BaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2040A22729E450019FA6B /* BaseError.swift */; };
 		04F4EB49227000DF0034CEBC /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4EB46227000DF0034CEBC /* String+.swift */; };
 		04F4EB4B227000DF0034CEBC /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4EB48227000DF0034CEBC /* UIImage+.swift */; };
 		04F4EB4D227001B70034CEBC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4EB4C227001B70034CEBC /* Constants.swift */; };
@@ -55,6 +67,18 @@
 		046BD275226E004A0016F7C4 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		04B38AB2226E9EDD00CDC29A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		04B38AD1226EC21000CDC29A /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		04C203EF22729B720019FA6B /* AudioRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRepository.swift; sourceTree = "<group>"; };
+		04C203F122729B8E0019FA6B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		04C203F322729B980019FA6B /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
+		04C203F622729BD60019FA6B /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		04C203F822729BE50019FA6B /* APIUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUrls.swift; sourceTree = "<group>"; };
+		04C203FB22729CA60019FA6B /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		04C203FD22729CCF0019FA6B /* AudiosRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudiosRequest.swift; sourceTree = "<group>"; };
+		04C2040022729D9E0019FA6B /* AudioResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioResponse.swift; sourceTree = "<group>"; };
+		04C2040322729DFC0019FA6B /* CustomRequestAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRequestAdapter.swift; sourceTree = "<group>"; };
+		04C2040522729E100019FA6B /* BaseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResult.swift; sourceTree = "<group>"; };
+		04C2040822729E2C0019FA6B /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		04C2040A22729E450019FA6B /* BaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseError.swift; sourceTree = "<group>"; };
 		04F4EB46227000DF0034CEBC /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		04F4EB48227000DF0034CEBC /* UIImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		04F4EB4C227001B70034CEBC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -124,6 +148,7 @@
 			children = (
 				04F4EB5822706CA80034CEBC /* Resources */,
 				046BD221226D79B10016F7C4 /* App */,
+				04EAF8422271B2F4008059E8 /* Repositories */,
 				046BD222226D79D50016F7C4 /* Extensions */,
 				046BD233226D7A5E0016F7C4 /* Data */,
 				046BD226226D7A5D0016F7C4 /* Scenes */,
@@ -201,6 +226,7 @@
 		046BD235226D7A5E0016F7C4 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				04C203F522729BC90019FA6B /* API */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -208,8 +234,66 @@
 		046BD244226D7A5E0016F7C4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04C203F122729B8E0019FA6B /* Data.swift */,
+				04C203F322729B980019FA6B /* Audio.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		04C203F522729BC90019FA6B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				04C203F622729BD60019FA6B /* APIService.swift */,
+				04C203F822729BE50019FA6B /* APIUrls.swift */,
+				04C203FA22729C920019FA6B /* Request */,
+				04C203FF22729D760019FA6B /* Response */,
+				04C2040222729DEE0019FA6B /* Middleware */,
+				04C2040722729E210019FA6B /* Error */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		04C203FA22729C920019FA6B /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				04C203FB22729CA60019FA6B /* BaseRequest.swift */,
+				04C203FD22729CCF0019FA6B /* AudiosRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		04C203FF22729D760019FA6B /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				04C2040022729D9E0019FA6B /* AudioResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		04C2040222729DEE0019FA6B /* Middleware */ = {
+			isa = PBXGroup;
+			children = (
+				04C2040322729DFC0019FA6B /* CustomRequestAdapter.swift */,
+				04C2040522729E100019FA6B /* BaseResult.swift */,
+			);
+			path = Middleware;
+			sourceTree = "<group>";
+		};
+		04C2040722729E210019FA6B /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				04C2040822729E2C0019FA6B /* ErrorResponse.swift */,
+				04C2040A22729E450019FA6B /* BaseError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		04EAF8422271B2F4008059E8 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				04C203EF22729B720019FA6B /* AudioRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		04F4EB4E227001CB0034CEBC /* Cell */ = {
@@ -434,13 +518,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SleepSound/Pods-SleepSound-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -454,14 +544,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C203F422729B980019FA6B /* Audio.swift in Sources */,
 				04F4EB4B227000DF0034CEBC /* UIImage+.swift in Sources */,
 				04B38AB4226E9EDD00CDC29A /* MainViewController.swift in Sources */,
+				04C203F022729B720019FA6B /* AudioRepository.swift in Sources */,
+				04C203F922729BE50019FA6B /* APIUrls.swift in Sources */,
+				04C2040622729E100019FA6B /* BaseResult.swift in Sources */,
 				04F4EB4D227001B70034CEBC /* Constants.swift in Sources */,
+				04C203FE22729CCF0019FA6B /* AudiosRequest.swift in Sources */,
+				04C203F222729B8E0019FA6B /* Data.swift in Sources */,
+				04C2040422729DFC0019FA6B /* CustomRequestAdapter.swift in Sources */,
 				04F4EB49227000DF0034CEBC /* String+.swift in Sources */,
 				04F4EB50227001CB0034CEBC /* AudioCollectionViewCell.swift in Sources */,
 				04F4EB53227038100034CEBC /* Storyboards.swift in Sources */,
+				04C203FC22729CA60019FA6B /* BaseRequest.swift in Sources */,
+				04C203F722729BD60019FA6B /* APIService.swift in Sources */,
 				046BD20C226D769F0016F7C4 /* AppDelegate.swift in Sources */,
+				04C2040922729E2C0019FA6B /* ErrorResponse.swift in Sources */,
 				046BD276226E004A0016F7C4 /* UIViewController+.swift in Sources */,
+				04C2040122729D9E0019FA6B /* AudioResponse.swift in Sources */,
+				04C2040B22729E450019FA6B /* BaseError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

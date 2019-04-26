@@ -14,12 +14,15 @@ final class MainViewController: UIViewController {
     @IBOutlet private weak var audioCollectionView: UICollectionView!
     
     // MARK: - Properties
+    private let audioRepository = AudioRepositoryImpl(api: APIService.share)
     
+    private var audios: [Audio] = []
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configView()
+        fetchData()
     }
     
     deinit {
@@ -34,6 +37,18 @@ final class MainViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
     }
     
+    private func fetchData() {
+        audioRepository.fetchAudio(page: 1) { result in
+            switch result {
+            case .success(let response):
+                guard let data = response?.audios else { return }
+                self.audios = data
+                self.audioCollectionView.reloadData()
+            case .failure(let error):
+                self.showError(message: error?.errorMessage)
+            }
+        }
+    }
 }
 
 extension MainViewController: UICollectionViewDelegateFlowLayout {
