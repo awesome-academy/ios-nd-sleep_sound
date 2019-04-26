@@ -7,7 +7,7 @@
 //
 
 enum Constants {
-    static var arrAudioNameList = ["Air Conditioner",
+    static let arrAudioNameList = ["Air Conditioner",
                                    "Aluminum Foil",
                                    "Balloons",
                                    "Bath Foam",

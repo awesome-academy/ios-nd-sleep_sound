@@ -19,7 +19,7 @@ final class AudioRepositoryImpl: AudioRepository {
     }
     
     func fetchAudio(page: Int, completion: @escaping (BaseResult<Data>) -> Void) {
-        let input = AudiosRequest(page: page)
+        let input = AudiosRequest()
         
         api?.request(input: input, completion: { (object: Data?, error) in
             if let object = object {

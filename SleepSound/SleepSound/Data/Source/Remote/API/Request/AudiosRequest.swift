@@ -8,12 +8,7 @@
 
 final class AudiosRequest: BaseRequest {
     
-    required init(page: Int, perPage: Int = 10) {
-        let parameters: [String: Any]  = [
-            "q": "language:swift",
-            "per_page": perPage,
-            "page": page
-        ]
-        super.init(url: Urls.getAudioNameList, requestType: .get, parameters: parameters)
+    required init() {
+        super.init(url: Urls.getAudioNameList, requestType: .get)
     }
 }

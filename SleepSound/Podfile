@@ -9,7 +9,6 @@ target 'SleepSound' do
   pod 'Reusable'
   pod 'Alamofire', '~>4.8'
   pod 'ObjectMapper'
-  pod 'SwiftyJSON'
   pod 'Toast'
   
 end
