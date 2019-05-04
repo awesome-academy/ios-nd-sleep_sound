@@ -15,7 +15,8 @@ final class MainViewController: UIViewController {
     
     // MARK: - Properties
     private let audioRepository = AudioRepositoryImpl(api: APIService.share)
-    
+    private var arrAudio = [String]()
+
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
@@ -52,7 +53,11 @@ final class MainViewController: UIViewController {
                                                     self.displayStartDownloadAudioAlert,
                                                    completion: { [weak self] in
                                                     self?.displayFinishDownloadAlert() })
-                
+                self.arrAudio = Constants.arrAudioNameList
+                for item in audios {
+                    let str = item.name
+                    self.arrAudio.append(str)
+                }
                 self.audioCollectionView.reloadData()
             case .failure(let error):
                 self.showError(message: error?.errorMessage)
@@ -92,14 +97,23 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
 
 extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Constants.arrAudioNameList.count
+        return arrAudio.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: AudioCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-        let audio = Constants.arrAudioNameList[indexPath.row]
-        if let image = UIImage(named: "\(audio).png") {
-            cell.setContentForCell(text: audio, textColor: Constants.fillColor, image: image)
+        let audio = arrAudio[indexPath.row]
+        let image = UIImage(named: "\(audio).png")
+        if indexPath.row >= 16 {
+            cell.setContentForCell(text: audio,
+                                   textColor: Constants.fillColor,
+                                   image: image,
+                                   isLocalImage: true)
+        } else {
+            cell.setContentForCell(text: audio,
+                                   textColor: Constants.fillColor,
+                                   image: image,
+                                   isLocalImage: false)
         }
         return cell
     }

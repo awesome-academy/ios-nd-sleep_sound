@@ -10,5 +10,6 @@ target 'SleepSound' do
   pod 'Alamofire', '~>4.8'
   pod 'ObjectMapper'
   pod 'Toast'
-  
+  pod 'Kingfisher'
+
 end
