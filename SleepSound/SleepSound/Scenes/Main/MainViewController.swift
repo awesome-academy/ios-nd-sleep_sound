@@ -37,7 +37,7 @@ final class MainViewController: UIViewController {
     }
 
     private func fetchData() {
-        audioRepository.fetchAudio(page: 1) { result in
+        audioRepository.fetchAudio { result in
             switch result {
             case .success(let response):
                 guard let audios = response?.audios else { return }
@@ -46,8 +46,13 @@ final class MainViewController: UIViewController {
                     urls.append(String(format: "%@/%@.mp3", Urls.getAudioList, $0.name))
                 }
                 DownloadService.share.downloadUrls(urls: urls,
-                                                   start: { self.displayStartDownloadAlert() },
-                                                   completion: { self.displayFinishDownloadAlert() })
+                                                   start: { [weak self] in
+                                                    self?.displayStartDownloadAlert() },
+                                                   startDownload:
+                                                    self.displayStartDownloadAudioAlert,
+                                                   completion: { [weak self] in
+                                                    self?.displayFinishDownloadAlert() })
+                
                 self.audioCollectionView.reloadData()
             case .failure(let error):
                 self.showError(message: error?.errorMessage)
@@ -58,6 +63,15 @@ final class MainViewController: UIViewController {
     func displayStartDownloadAlert() {
         DispatchQueue.main.async {
             UIApplication.topViewController()?.view.makeToast("Start Download")
+        }
+    }
+    
+    func displayStartDownloadAudioAlert(url: String) {
+        if let range = url.range(of: "\(Urls.getAudioList)") {
+            let name = url[range.upperBound...]
+            DispatchQueue.main.async {
+                UIApplication.topViewController()?.view.makeToast("\(name) is downloading")
+            }
         }
     }
     

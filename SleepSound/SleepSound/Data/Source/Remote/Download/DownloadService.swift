@@ -27,7 +27,7 @@ struct DownloadService {
             })
     }
     
-    func downloadUrls(urls: [String], start: (() -> Void)? = nil, completion: (() -> Void)? = nil) {
+    func downloadUrls(urls: [String], start: (() -> Void)? = nil, startDownload: ((_ url: String) -> Void)? = nil, completion: (() -> Void)? = nil) {
         start?()
         let downloadGroup = DispatchGroup()
         let semaphore = DispatchSemaphore(value: 0)
@@ -35,6 +35,7 @@ struct DownloadService {
         concurrentQueue.async {
             for url in urls {
                 downloadGroup.enter()
+                startDownload?(url)
                 self.downloadUrl(url: url,
                                  start: { },
                                  completion: {
