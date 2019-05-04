@@ -16,7 +16,6 @@ final class MainViewController: UIViewController {
     // MARK: - Properties
     private let audioRepository = AudioRepositoryImpl(api: APIService.share)
     
-    private var audios: [Audio] = []
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
@@ -36,19 +35,52 @@ final class MainViewController: UIViewController {
             .imageWithColor(newColor: Constants.fillColor), for: .normal)
         navigationController?.isNavigationBarHidden = true
     }
-    
+
     private func fetchData() {
-        audioRepository.fetchAudio(page: 1) { result in
+        audioRepository.fetchAudio { result in
             switch result {
             case .success(let response):
-                guard let data = response?.audios else { return }
-                self.audios = data
+                guard let audios = response?.audios else { return }
+                var urls: [String] = []
+                audios.forEach {
+                    urls.append(String(format: "%@/%@.mp3", Urls.getAudioList, $0.name))
+                }
+                DownloadService.share.downloadUrls(urls: urls,
+                                                   start: { [weak self] in
+                                                    self?.displayStartDownloadAlert() },
+                                                   startDownload:
+                                                    self.displayStartDownloadAudioAlert,
+                                                   completion: { [weak self] in
+                                                    self?.displayFinishDownloadAlert() })
+                
                 self.audioCollectionView.reloadData()
             case .failure(let error):
                 self.showError(message: error?.errorMessage)
             }
         }
     }
+    
+    func displayStartDownloadAlert() {
+        DispatchQueue.main.async {
+            UIApplication.topViewController()?.view.makeToast("Start Download")
+        }
+    }
+    
+    func displayStartDownloadAudioAlert(url: String) {
+        if let range = url.range(of: "\(Urls.getAudioList)") {
+            let name = url[range.upperBound...]
+            DispatchQueue.main.async {
+                UIApplication.topViewController()?.view.makeToast("\(name) is downloading")
+            }
+        }
+    }
+    
+    func displayFinishDownloadAlert() {
+        DispatchQueue.main.async {
+            UIApplication.topViewController()?.view.makeToast("Download Successful")
+        }
+    }
+        
 }
 
 extension MainViewController: UICollectionViewDelegateFlowLayout {
@@ -72,6 +104,7 @@ extension MainViewController: UICollectionViewDataSource {
         return cell
     }
 }
+
 extension MainViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     }

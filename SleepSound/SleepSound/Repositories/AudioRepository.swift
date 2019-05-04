@@ -7,7 +7,7 @@
 //
 
 protocol AudioRepository {
-    func fetchAudio(page: Int, completion: @escaping (BaseResult<Data>) -> Void)
+    func fetchAudio(completion: @escaping (BaseResult<Data>) -> Void)
 }
 
 final class AudioRepositoryImpl: AudioRepository {
@@ -18,9 +18,8 @@ final class AudioRepositoryImpl: AudioRepository {
         self.api = api
     }
     
-    func fetchAudio(page: Int, completion: @escaping (BaseResult<Data>) -> Void) {
-        let input = AudiosRequest()
-        
+    func fetchAudio(completion: @escaping (BaseResult<Data>) -> Void) {
+        let input = AudiosRequest()        
         api?.request(input: input, completion: { (object: Data?, error) in
             if let object = object {
                 completion(.success(object))
