@@ -15,6 +15,7 @@ final class MainViewController: UIViewController {
     
     // MARK: - Properties
     private let audioRepository = AudioRepositoryImpl(api: APIService.share)
+    private var arrAudio = [Audio]()
     
     // MARK: - Life Cycle
     
@@ -35,7 +36,7 @@ final class MainViewController: UIViewController {
             .imageWithColor(newColor: Constants.fillColor), for: .normal)
         navigationController?.isNavigationBarHidden = true
     }
-
+    
     private func fetchData() {
         audioRepository.fetchAudio { result in
             switch result {
@@ -48,11 +49,15 @@ final class MainViewController: UIViewController {
                 DownloadService.share.downloadUrls(urls: urls,
                                                    start: { [weak self] in
                                                     self?.displayStartDownloadAlert() },
-                                                   startDownload:
-                                                    self.displayStartDownloadAudioAlert,
+                                                   startDownload: {[weak self] text in
+                                                    self?.displayStartDownloadAlert(url: text)
+                                                    },
                                                    completion: { [weak self] in
                                                     self?.displayFinishDownloadAlert() })
-                
+                self.arrAudio = Constants.arrAudioNameList
+                for item in audios {
+                    self.arrAudio.append(item)
+                }
                 self.audioCollectionView.reloadData()
             case .failure(let error):
                 self.showError(message: error?.errorMessage)
@@ -66,7 +71,7 @@ final class MainViewController: UIViewController {
         }
     }
     
-    func displayStartDownloadAudioAlert(url: String) {
+    func displayStartDownloadAlert(url: String) {
         if let range = url.range(of: "\(Urls.getAudioList)") {
             let name = url[range.upperBound...]
             DispatchQueue.main.async {
@@ -80,7 +85,7 @@ final class MainViewController: UIViewController {
             UIApplication.topViewController()?.view.makeToast("Download Successful")
         }
     }
-        
+    
 }
 
 extension MainViewController: UICollectionViewDelegateFlowLayout {
@@ -92,14 +97,23 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
 
 extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Constants.arrAudioNameList.count
+        return arrAudio.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: AudioCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-        let audio = Constants.arrAudioNameList[indexPath.row]
-        if let image = UIImage(named: "\(audio).png") {
-            cell.setContentForCell(text: audio, textColor: Constants.fillColor, image: image)
+        let audio = arrAudio[indexPath.row].name
+        let image = UIImage(named: "\(audio).png")
+        if indexPath.row >= Constants.arrAudioNameList.count {
+            cell.setContentForCell(text: audio,
+                                   textColor: Constants.fillColor,
+                                   image: image,
+                                   isLocalImage: true)
+        } else {
+            cell.setContentForCell(text: audio,
+                                   textColor: Constants.fillColor,
+                                   image: image,
+                                   isLocalImage: false)
         }
         return cell
     }

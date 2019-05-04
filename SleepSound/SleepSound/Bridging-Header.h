@@ -12,4 +12,6 @@
 @import Alamofire;
 @import Toast;
 @import ObjectMapper;
+@import Kingfisher;
+
 
