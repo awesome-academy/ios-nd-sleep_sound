@@ -24,20 +24,43 @@ final class AudioCollectionViewCell: UICollectionViewCell, Reusable {
         sliderChanged?(sender.value)
     }
     
-    func setContentForCell(text: String, textColor: UIColor, image: UIImage?, isLocalImage: Bool) {
+    func setContentForCell(text: String, textColor: UIColor, image: UIImage?, isLocalImage: Bool, isCheckRowSelected: Bool) {
         audioNameLabel.text = text
         audioNameLabel.textColor = fillColor
-        if isLocalImage {
-            audioImageView.kf.setImage(
-                with: URL(string: "\(Urls.getAudioList)\(text).png".encoded()),
-                placeholder: UIImage(named: "placeholderImage"),
-                options: nil) { [weak self] result in
-                    if let image = result.value?.image {
-                        self?.audioImageView.image = image.imageWithColor(newColor: self?.fillColor)
-                    }
+        if isCheckRowSelected {
+            if isLocalImage {
+                audioImageView.kf.setImage(
+                    with: URL(string: "\(Urls.getAudioList)\(text).png".encoded()),
+                    placeholder: UIImage(named: "placeholderImage"),
+                    options: nil) { [weak self] result in
+                        if let image = result.value?.image {
+                            self?.audioImageView.image = image.imageWithColor(newColor: self?.fillColor)
+                        }
+                }
+            } else {
+                audioImageView.image = image?.imageWithColor(newColor: fillColor)
             }
+            audioNameLabel.textColor = Constants.fillColor
+            volumeSlider.isHidden = false
+            cellView.layer.borderColor = Constants.fillColor.cgColor
+            cellView.layer.borderWidth = 1.0
+            cellView.layer.cornerRadius = 10
         } else {
-            audioImageView.image = image?.imageWithColor(newColor: fillColor)
+            if isLocalImage {
+                audioImageView.kf.setImage(
+                    with: URL(string: "\(Urls.getAudioList)\(text).png".encoded()),
+                    placeholder: UIImage(named: "placeholderImage"),
+                    options: nil) { result in
+                        if let _image = result.value?.image {
+                            self.audioImageView.image = _image.imageWithColor(newColor: UIColor.white)
+                        }
+                }
+            } else {
+                audioImageView.image = image?.imageWithColor(newColor: UIColor.white)
+            }
+            audioNameLabel.textColor = UIColor.white
+            volumeSlider.isHidden = true
+            cellView.layer.borderColor = UIColor.clear.cgColor
         }
     }
 }
