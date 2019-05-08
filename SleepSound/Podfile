@@ -11,5 +11,5 @@ target 'SleepSound' do
   pod 'ObjectMapper'
   pod 'Toast'
   pod 'Kingfisher'
-
+  pod 'Then'
 end
