@@ -28,6 +28,11 @@
                                     <constraint firstAttribute="height" constant="50" id="n0i-86-YHC"/>
                                 </constraints>
                                 <state key="normal" image="star_selected"/>
+                                <connections>
+                                    <segue destination="lTB-0m-ecp" kind="popoverPresentation" popoverAnchorView="kNQ-fa-ohD" id="lc4-mC-wfz">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2p-3D-94T">
                                 <rect key="frame" x="20" y="30" width="50" height="50"/>
@@ -36,6 +41,9 @@
                                     <constraint firstAttribute="width" constant="50" id="jkM-Mf-3BJ"/>
                                 </constraints>
                                 <state key="normal" image="random"/>
+                                <connections>
+                                    <action selector="randomButtonTapped:" destination="vlQ-Ou-j81" eventType="touchUpInside" id="SLV-dJ-chv"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:09" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2es-Dp-L5R">
                                 <rect key="frame" x="112.5" y="40" width="150" height="30"/>
@@ -57,6 +65,9 @@
                                             <constraint firstAttribute="width" constant="60" id="wmq-na-6Hw"/>
                                         </constraints>
                                         <state key="normal" image="timer"/>
+                                        <connections>
+                                            <segue destination="uxm-Qy-NFh" kind="presentation" id="ZXu-ES-GcE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBk-9I-WlL">
                                         <rect key="frame" x="142.5" y="5" width="70" height="70"/>
@@ -77,6 +88,11 @@
                                             <constraint firstAttribute="height" constant="50" id="cXT-6u-eVc"/>
                                         </constraints>
                                         <state key="normal" image="mixer"/>
+                                        <connections>
+                                            <segue destination="cyz-Q9-RKf" kind="popoverPresentation" popoverAnchorView="Rik-1m-EcM" id="kfP-dt-aUI">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -178,7 +194,7 @@
                                                 <connections>
                                                     <outlet property="audioImageView" destination="DVi-gb-UKg" id="KsI-A3-HQQ"/>
                                                     <outlet property="audioNameLabel" destination="nmJ-pA-wPK" id="QRB-l6-eCa"/>
-                                                    <outlet property="cellView" destination="qgJ-zb-IvD" id="uDm-lt-0R7"/>
+                                                    <outlet property="cellView" destination="qgJ-zb-IvD" id="gkS-x3-vdE"/>
                                                     <outlet property="volumeSlider" destination="g2Z-5z-iBi" id="2fi-Ui-gxq"/>
                                                 </connections>
                                             </collectionViewCell>
@@ -228,11 +244,57 @@
                         <outlet property="audioSearchBar" destination="XtY-9w-cBt" id="TK4-el-h0g"/>
                         <outlet property="mixerButton" destination="Rik-1m-EcM" id="N5m-L2-yjq"/>
                         <outlet property="playPauseAudioButton" destination="GBk-9I-WlL" id="WNO-gp-gX1"/>
+                        <outlet property="randomButton" destination="r2p-3D-94T" id="ag2-pU-7hA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B0f-g7-lwl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="649" y="-150"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MoL-4T-uHP">
+            <objects>
+                <viewController id="uxm-Qy-NFh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nve-Tq-yCe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="15g-aH-fqA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O8M-pe-1K2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="649" y="545"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lPj-iL-qIr">
+            <objects>
+                <viewController id="lTB-0m-ecp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cuU-8F-6yf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="27P-yK-czW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QAx-Y9-nwN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1567" y="-146"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NGn-TX-aA8">
+            <objects>
+                <viewController id="cyz-Q9-RKf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0hN-Hx-qDt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="b3f-mJ-SXV"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PUn-0i-HtO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1567" y="549"/>
         </scene>
     </scenes>
     <resources>
