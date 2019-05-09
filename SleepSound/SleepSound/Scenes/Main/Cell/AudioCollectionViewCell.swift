@@ -24,20 +24,37 @@ final class AudioCollectionViewCell: UICollectionViewCell, Reusable {
         sliderChanged?(sender.value)
     }
     
-    func setContentForCell(text: String, textColor: UIColor, image: UIImage?, isLocalImage: Bool) {
+    func setContentForCell(text: String,
+                           image: UIImage?,
+                           isLocalImage: Bool,
+                           isCheckRowSelected: Bool) {
         audioNameLabel.text = text
-        audioNameLabel.textColor = fillColor
         if isLocalImage {
             audioImageView.kf.setImage(
                 with: URL(string: "\(Urls.getAudioList)\(text).png".encoded()),
                 placeholder: UIImage(named: "placeholderImage"),
                 options: nil) { [weak self] result in
                     if let image = result.value?.image {
-                        self?.audioImageView.image = image.imageWithColor(newColor: self?.fillColor)
+                        self?.audioImageView.image =
+                            image.imageWithColor(newColor: isCheckRowSelected ? self?.fillColor : . white)
                     }
             }
         } else {
-            audioImageView.image = image?.imageWithColor(newColor: fillColor)
+            audioImageView.image = image?.imageWithColor(newColor: isCheckRowSelected ? fillColor : .white)
+        }
+        
+        if isCheckRowSelected {
+            audioNameLabel.textColor = fillColor
+            volumeSlider.isHidden = false
+            cellView.layer.do {
+                $0.borderColor = fillColor.cgColor
+                $0.borderWidth = 1.0
+                $0.cornerRadius = 10
+            }
+        } else {
+            audioNameLabel.textColor = .white
+            volumeSlider.isHidden = true
+            cellView.layer.borderColor = UIColor.clear.cgColor
         }
     }
 }

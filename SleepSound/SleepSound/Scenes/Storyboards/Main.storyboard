@@ -66,6 +66,9 @@
                                         </constraints>
                                         <state key="normal" image="play"/>
                                         <state key="selected" image="pause"/>
+                                        <connections>
+                                            <action selector="playPauseButtonTapped:" destination="vlQ-Ou-j81" eventType="touchUpInside" id="Iyp-FJ-Rl4"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rik-1m-EcM">
                                         <rect key="frame" x="285" y="15" width="50" height="50"/>
@@ -129,7 +132,7 @@
                                                                         <constraint firstAttribute="height" constant="40" id="x8O-V0-1am"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Air Conditioner" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmJ-pA-wPK">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Air Conditioner" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmJ-pA-wPK">
                                                                     <rect key="frame" x="0.0" y="50" width="150" height="20"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="20" id="3gY-Rh-LhY"/>
@@ -224,6 +227,7 @@
                         <outlet property="audioCollectionView" destination="D1g-AD-V7z" id="HsE-b8-cEg"/>
                         <outlet property="audioSearchBar" destination="XtY-9w-cBt" id="TK4-el-h0g"/>
                         <outlet property="mixerButton" destination="Rik-1m-EcM" id="N5m-L2-yjq"/>
+                        <outlet property="playPauseAudioButton" destination="GBk-9I-WlL" id="WNO-gp-gX1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B0f-g7-lwl" userLabel="First Responder" sceneMemberID="firstResponder"/>

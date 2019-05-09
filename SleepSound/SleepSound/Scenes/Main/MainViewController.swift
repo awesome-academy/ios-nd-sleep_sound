@@ -12,25 +12,31 @@ final class MainViewController: UIViewController {
     @IBOutlet private weak var audioSearchBar: UISearchBar!
     @IBOutlet private weak var mixerButton: UIButton!
     @IBOutlet private weak var audioCollectionView: UICollectionView!
+    @IBOutlet private weak var playPauseAudioButton: UIButton!
     
     // MARK: - Properties
-    private let audioRepository = AudioRepositoryImpl(api: APIService.share)
     private var arrAudio = [Audio]()
-    
+    private let audioRepository = AudioRepositoryImpl(api: APIService.share)
+    private var arrAudioPlayer = [String: AVPlayer]()
+
     // MARK: - Life Cycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configView()
         fetchData()
     }
-    
+
     deinit {
         logDeinit()
     }
     
-    // MARK: - Methods
+    // MARK: - IBAction
+    @IBAction func playPauseButtonTapped(_ sender: Any) {
+        playPauseAudioButton.isSelected = !playPauseAudioButton.isSelected
+        playPauseAudioButton.isSelected ? replay() : stopAudio()
+    }
     
+    // MARK: - Methods
     private func configView() {
         mixerButton.setImage(UIImage(named: "mixer.png")?
             .imageWithColor(newColor: Constants.fillColor), for: .normal)
@@ -65,6 +71,23 @@ final class MainViewController: UIViewController {
         }
     }
     
+    func reloadPlayButton() {
+        playPauseAudioButton.isSelected = arrAudioPlayer.isEmpty
+        playPauseAudioButton.isEnabled = arrAudioPlayer.isEmpty
+    }
+    
+    private func stopAudio() {
+        for item in arrAudioPlayer.values {
+            item.pause()
+        }
+    }
+    
+    private func replay() {
+        for item in arrAudioPlayer.values {
+            item.play()
+        }
+    }
+    
     func displayStartDownloadAlert() {
         DispatchQueue.main.async {
             UIApplication.topViewController()?.view.makeToast("Start Download")
@@ -85,7 +108,6 @@ final class MainViewController: UIViewController {
             UIApplication.topViewController()?.view.makeToast("Download Successful")
         }
     }
-    
 }
 
 extension MainViewController: UICollectionViewDelegateFlowLayout {
@@ -103,28 +125,66 @@ extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: AudioCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
         let audio = arrAudio[indexPath.row].name
+        
+        var isCheckRowSelected = false
+        var isCheckLocalImage = false
+        for item in arrAudioPlayer where item.key == audio {
+            isCheckRowSelected = true
+        }
         let image = UIImage(named: "\(audio).png")
         if indexPath.row >= Constants.arrAudioNameList.count {
-            cell.setContentForCell(text: audio,
-                                   textColor: Constants.fillColor,
-                                   image: image,
-                                   isLocalImage: true)
+            isCheckLocalImage = indexPath.row >= Constants.arrAudioNameList.count
         } else {
-            cell.setContentForCell(text: audio,
-                                   textColor: Constants.fillColor,
-                                   image: image,
-                                   isLocalImage: false)
+            isCheckLocalImage = indexPath.row >= Constants.arrAudioNameList.count
         }
+        
+        cell.setContentForCell(text: audio,
+                               image: image,
+                               isLocalImage: isCheckLocalImage,
+                               isCheckRowSelected: isCheckRowSelected)
         return cell
     }
 }
 
 extension MainViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let audio = arrAudio[indexPath.row].name
+        var player = AVPlayer()
+        if indexPath.row >= Constants.arrAudioNameList.count {
+            let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+            if let pathComponent = NSURL(fileURLWithPath: path).appendingPathComponent("\(audio).mp3") {
+                if !FileManager.default.fileExists(atPath: pathComponent.path) {
+                    showDefault(title: "Warning", message: "Audio is downloading, please wait for a while")
+                    return
+                } else {
+                    player = AVPlayer(url: pathComponent.absoluteURL)
+                }
+            }
+        } else {
+            let audioName = Bundle.main.path(forResource: audio, ofType: "mp3")
+            let audioURL = URL(fileURLWithPath: audioName ?? "")
+            player = AVPlayer(url: audioURL)
+        }
+        
+        if arrAudioPlayer.keys.contains(audio) {
+            player.removePlayer()
+            arrAudioPlayer.removeValue(forKey: audio)
+        } else {
+            if arrAudioPlayer.count > 10 {
+                showDefault(title: "Warning", message: "Not select more than 10 audio")
+                return
+            } else {
+                arrAudioPlayer.updateValue(player, forKey: audio)
+            }
+        }
+        
+        player.configure()
+        player.play()
+        reloadPlayButton()
+        collectionView.reloadItems(at: [indexPath])
     }
 }
 // MARK: - StoryboardSceneBased
 extension MainViewController: StoryboardSceneBased {
     static var sceneStoryboard = Storyboards.main
 }
-

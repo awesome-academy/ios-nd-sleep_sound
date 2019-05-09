@@ -12,6 +12,7 @@
 		046BD219226D76A00016F7C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046BD217226D76A00016F7C4 /* LaunchScreen.storyboard */; };
 		046BD26B226DA91D0016F7C4 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 046BD26A226DA91D0016F7C4 /* .swiftlint.yml */; };
 		046BD276226E004A0016F7C4 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD275226E004A0016F7C4 /* UIViewController+.swift */; };
+		04ADCC3B227FE4BE00520C40 /* AVPlayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADCC3A227FE4BE00520C40 /* AVPlayer+.swift */; };
 		04B38AB4226E9EDD00CDC29A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B38AB2226E9EDD00CDC29A /* MainViewController.swift */; };
 		04C203F022729B720019FA6B /* AudioRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C203EF22729B720019FA6B /* AudioRepository.swift */; };
 		04C203F222729B8E0019FA6B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C203F122729B8E0019FA6B /* Data.swift */; };
@@ -67,6 +68,7 @@
 		046BD21A226D76A00016F7C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		046BD26A226DA91D0016F7C4 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		046BD275226E004A0016F7C4 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		04ADCC3A227FE4BE00520C40 /* AVPlayer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVPlayer+.swift"; sourceTree = "<group>"; };
 		04B38AB2226E9EDD00CDC29A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		04B38AD1226EC21000CDC29A /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		04C203EF22729B720019FA6B /* AudioRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRepository.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				04F4EB46227000DF0034CEBC /* String+.swift */,
 				04F4EB48227000DF0034CEBC /* UIImage+.swift */,
 				04E313E5227AAC0C00C366BE /* UIApplication+.swift */,
+				04ADCC3A227FE4BE00520C40 /* AVPlayer+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
+				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -546,6 +550,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -574,6 +579,7 @@
 				04F4EB50227001CB0034CEBC /* AudioCollectionViewCell.swift in Sources */,
 				04F4EB53227038100034CEBC /* Storyboards.swift in Sources */,
 				04C203FC22729CA60019FA6B /* BaseRequest.swift in Sources */,
+				04ADCC3B227FE4BE00520C40 /* AVPlayer+.swift in Sources */,
 				04C203F722729BD60019FA6B /* APIService.swift in Sources */,
 				04E313E6227AAC0C00C366BE /* UIApplication+.swift in Sources */,
 				046BD20C226D769F0016F7C4 /* AppDelegate.swift in Sources */,

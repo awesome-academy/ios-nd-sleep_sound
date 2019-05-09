@@ -11,6 +11,13 @@ extension UIViewController {
         print(String(describing: type(of: self)) + " deinit")
     }
     
+    func showDefault(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .cancel)
+        alert.addAction(alertAction)
+        UIApplication.topViewController()?.present(alert, animated: true)
+    }
+    
     func showError(message: String?, completion: (() -> Void)? = nil) {
         let ac = UIAlertController(title: "Error",
                                    message: message,
