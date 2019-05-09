@@ -194,6 +194,7 @@
                                                 <connections>
                                                     <outlet property="audioImageView" destination="DVi-gb-UKg" id="KsI-A3-HQQ"/>
                                                     <outlet property="audioNameLabel" destination="nmJ-pA-wPK" id="QRB-l6-eCa"/>
+                                                    <outlet property="cellView" destination="qgJ-zb-IvD" id="gkS-x3-vdE"/>
                                                     <outlet property="volumeSlider" destination="g2Z-5z-iBi" id="2fi-Ui-gxq"/>
                                                 </connections>
                                             </collectionViewCell>
@@ -298,11 +299,11 @@
     </scenes>
     <resources>
         <image name="background" width="414" height="896"/>
-        <image name="mixer" width="16" height="16"/>
-        <image name="pause" width="16" height="16"/>
-        <image name="play" width="16" height="16"/>
-        <image name="random" width="16" height="16"/>
-        <image name="star_selected" width="16" height="16"/>
-        <image name="timer" width="16" height="16"/>
+        <image name="mixer" width="171" height="171"/>
+        <image name="pause" width="58.593105316162109" height="58.593105316162109"/>
+        <image name="play" width="58.593105316162109" height="58.593105316162109"/>
+        <image name="random" width="45.186206817626953" height="45.186206817626953"/>
+        <image name="star_selected" width="22.684930801391602" height="21.351724624633789"/>
+        <image name="timer" width="46" height="46"/>
     </resources>
 </document>

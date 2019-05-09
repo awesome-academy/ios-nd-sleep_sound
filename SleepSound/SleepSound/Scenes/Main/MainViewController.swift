@@ -18,17 +18,16 @@ final class MainViewController: UIViewController {
     // MARK: - Properties
     private var arrAudio = [Audio]()
     private var filteredAudio = [Audio]()
-    private var searchingAudio = false
+    private var isSearchingAudio = false
     private let audioRepository = AudioRepositoryImpl(api: APIService.share)
     private var arrAudioPlayer = [String: AVPlayer]()
-    private var timerRandom: Timer! = nil
+    private var timerRandom: Timer?
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configView()
         fetchData()
-        audioSearchBar.delegate = self
     }
 
     deinit {
@@ -45,7 +44,7 @@ final class MainViewController: UIViewController {
         arrAudioPlayer.removeAll()
         randomButton.isSelected = !randomButton.isSelected
         randomButton.isSelected ? startTimerRandom() : stopTimerRandom()
-        reloadPlayButton()
+        configPlayButton()
         playPauseAudioButton.isSelected = randomButton.isSelected
         audioCollectionView.reloadData()
     }
@@ -55,6 +54,7 @@ final class MainViewController: UIViewController {
         mixerButton.setImage(UIImage(named: "mixer.png")?
             .imageWithColor(newColor: Constants.fillColor), for: .normal)
         navigationController?.isNavigationBarHidden = true
+        audioSearchBar.delegate = self
     }
     
     private func fetchData() {
@@ -85,7 +85,7 @@ final class MainViewController: UIViewController {
         }
     }
     
-    func reloadPlayButton() {
+    func configPlayButton() {
         playPauseAudioButton.isSelected = !arrAudioPlayer.isEmpty
         playPauseAudioButton.isEnabled = !arrAudioPlayer.isEmpty
     }
@@ -104,31 +104,33 @@ final class MainViewController: UIViewController {
     
     func stopTimerRandom() {
         if timerRandom != nil {
-            timerRandom.invalidate()
-            timerRandom = nil
+            timerRandom?.invalidate()
         }
     }
     
     func startTimerRandom() {
-        let indexPathRow = Int(arc4random_uniform(UInt32(arrAudio.count)))
+        let indexPathRow = Int.random(in: 0 ... arrAudio.count)
         let audio = arrAudio[indexPathRow].name
         arrAudioPlayer.updateValue(playerForName(indexPathRow), forKey: audio)
-        reloadPlayButton()
+        configPlayButton()
         audioCollectionView.reloadData()
     }
     
     func playerForName(_ row: Int) -> AVPlayer {
         var player = AVPlayer()
         if row >= Constants.arrAudioNameList.count {
+            
             let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-            if let pathComponent = NSURL(fileURLWithPath: path).appendingPathComponent("\(arrAudio[row].name).mp3") {
-                if !FileManager.default.fileExists(atPath: pathComponent.path) {
-                    showDefault(title: "Warning", message: "Audio is downloading, please wait for a while")
-                    randomButton.isSelected = false
-                    return player
-                } else {
-                    player = AVPlayer(url: pathComponent.absoluteURL)
-                }
+            
+            guard let pathComponent = NSURL(fileURLWithPath: path).appendingPathComponent("\(arrAudio[row].name).mp3") else {
+                return player
+            }
+            if !FileManager.default.fileExists(atPath: pathComponent.path) {
+                showDefault(title: "Warning", message: "Audio is downloading, please wait for a while")
+                randomButton.isSelected = false
+                return player
+            } else {
+                player = AVPlayer(url: pathComponent.absoluteURL)
             }
         } else {
             let audioName = Bundle.main.path(forResource: arrAudio[row].name, ofType: "mp3")
@@ -171,12 +173,12 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
 
 extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return searchingAudio ? filteredAudio.count : arrAudio.count
+        return isSearchingAudio ? filteredAudio.count : arrAudio.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: AudioCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-        let audio = searchingAudio ? filteredAudio[indexPath.row].name : arrAudio[indexPath.row].name
+        let audio = isSearchingAudio ? filteredAudio[indexPath.row].name : arrAudio[indexPath.row].name
         
         var isCheckRowSelected = false
         var isCheckLocalImage = false
@@ -184,11 +186,7 @@ extension MainViewController: UICollectionViewDataSource {
             isCheckRowSelected = true
         }
         let image = UIImage(named: "\(audio).png")
-        if image != nil {
-            isCheckLocalImage = false
-        } else {
-            isCheckLocalImage = true
-        }
+        isCheckLocalImage = image == nil
         
         cell.setContentForCell(text: audio,
                                image: image,
@@ -211,7 +209,7 @@ extension MainViewController: UICollectionViewDelegate {
                 arrAudioPlayer.updateValue(playerForName(indexPath.row), forKey: audio)
             }
         }
-        reloadPlayButton()
+        configPlayButton()
         collectionView.reloadItems(at: [indexPath])
     }
 }
@@ -224,7 +222,7 @@ extension MainViewController: UISearchBarDelegate {
         filteredAudio = searchText.isEmpty ? arrAudio : arrAudio.filter {
             $0.name.lowercased().contains(searchText.lowercased())
         }
-        searchingAudio = true
+        isSearchingAudio = true
         audioCollectionView.reloadData()
     }
 }
