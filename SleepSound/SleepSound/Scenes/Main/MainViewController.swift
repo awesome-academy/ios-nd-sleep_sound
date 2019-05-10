@@ -13,6 +13,7 @@ final class MainViewController: UIViewController {
     @IBOutlet private weak var mixerButton: UIButton!
     @IBOutlet private weak var randomButton: UIButton!
     @IBOutlet private weak var playPauseAudioButton: UIButton!
+    @IBOutlet private weak var currentTimeLabel: UILabel!
     @IBOutlet private weak var audioCollectionView: UICollectionView!
     
     // MARK: - Properties
@@ -28,12 +29,21 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         configView()
         fetchData()
-    }
-
-    deinit {
-        logDeinit()
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(configureTimer),
+                                               name: NSNotification.Name("configureTimer"),
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(stopAndClearAudio),
+                                               name: NSNotification.Name("stopAndClearAudio"),
+                                               object: nil)
     }
     
+    deinit {
+        logDeinit()
+        NotificationCenter.default.removeObserver(self)
+    }
+
     // MARK: - IBAction
     @IBAction func playPauseButtonTapped(_ sender: Any) {
         playPauseAudioButton.isSelected = !playPauseAudioButton.isSelected
@@ -122,7 +132,8 @@ final class MainViewController: UIViewController {
             
             let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
             
-            guard let pathComponent = NSURL(fileURLWithPath: path).appendingPathComponent("\(arrAudio[row].name).mp3") else {
+            guard let pathComponent =
+                NSURL(fileURLWithPath: path).appendingPathComponent("\(arrAudio[row].name).mp3") else {
                 return player
             }
             if !FileManager.default.fileExists(atPath: pathComponent.path) {
@@ -140,6 +151,30 @@ final class MainViewController: UIViewController {
         player.configure()
         player.play()
         return player
+    }
+    
+    @objc
+    func stopAndClearAudio() {
+        currentTimeLabel.isHidden = true
+        currentTimeLabel.isHidden = true
+        stopAudio()
+        arrAudioPlayer.removeAll()
+        audioCollectionView.reloadData()
+    }
+    
+    @objc
+    func configureTimer() {
+        if let date = UserDefaults.standard.dateForKey("fireDate") {
+            let leftTime = Int(date.timeIntervalSince(Date()))
+            let hour = leftTime / 3_600
+            let minute = (leftTime - hour * 3_600) / 60
+            let second = leftTime - hour * 3_600 - minute * 60
+            currentTimeLabel.isHidden = false
+            currentTimeLabel.text = String(format: "%02d : %02d : %02d", hour, minute, second)
+            if hour == 0 && minute == 0 && second <= 0 {
+                currentTimeLabel.isHidden = true
+            }
+        }
     }
     
     func displayStartDownloadAlert() {
@@ -198,7 +233,7 @@ extension MainViewController: UICollectionViewDataSource {
 
 extension MainViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let audio = arrAudio[indexPath.row].name
+        let audio = isSearchingAudio ? filteredAudio[indexPath.row].name : arrAudio[indexPath.row].name
         if arrAudioPlayer.keys.contains(audio) {
             arrAudioPlayer.removeValue(forKey: audio)
         } else {
