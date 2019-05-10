@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0402AF3D22842CDD0030CC92 /* TimersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0402AF3C22842CDD0030CC92 /* TimersViewController.swift */; };
+		0402AF3F22842D150030CC92 /* UserDefaults+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0402AF3E22842D150030CC92 /* UserDefaults+.swift */; };
+		0402AF4122842D3A0030CC92 /* Timers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0402AF4022842D3A0030CC92 /* Timers.swift */; };
 		046BD20C226D769F0016F7C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD20B226D769F0016F7C4 /* AppDelegate.swift */; };
 		046BD216226D76A00016F7C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046BD215226D76A00016F7C4 /* Assets.xcassets */; };
 		046BD219226D76A00016F7C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046BD217226D76A00016F7C4 /* LaunchScreen.storyboard */; };
@@ -61,6 +64,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0402AF3C22842CDD0030CC92 /* TimersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimersViewController.swift; sourceTree = "<group>"; };
+		0402AF3E22842D150030CC92 /* UserDefaults+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+.swift"; sourceTree = "<group>"; };
+		0402AF4022842D3A0030CC92 /* Timers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timers.swift; sourceTree = "<group>"; };
 		046BD208226D769F0016F7C4 /* SleepSound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepSound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		046BD20B226D769F0016F7C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		046BD215226D76A00016F7C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,6 +137,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0402AF3B22842CAE0030CC92 /* Timers */ = {
+			isa = PBXGroup;
+			children = (
+				0402AF3C22842CDD0030CC92 /* TimersViewController.swift */,
+			);
+			path = Timers;
+			sourceTree = "<group>";
+		};
 		046BD1FF226D769F0016F7C4 = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +198,7 @@
 				04F4EB48227000DF0034CEBC /* UIImage+.swift */,
 				04E313E5227AAC0C00C366BE /* UIApplication+.swift */,
 				04ADCC3A227FE4BE00520C40 /* AVPlayer+.swift */,
+				0402AF3E22842D150030CC92 /* UserDefaults+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -192,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				04F4EB4C227001B70034CEBC /* Constants.swift */,
+				0402AF4022842D3A0030CC92 /* Timers.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -201,6 +217,7 @@
 			children = (
 				04F4EB51227037FC0034CEBC /* Storyboards */,
 				046BD22C226D7A5D0016F7C4 /* Main */,
+				0402AF3B22842CAE0030CC92 /* Timers */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -565,7 +582,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0402AF3D22842CDD0030CC92 /* TimersViewController.swift in Sources */,
 				04C203F422729B980019FA6B /* Audio.swift in Sources */,
+				0402AF3F22842D150030CC92 /* UserDefaults+.swift in Sources */,
 				04F4EB4B227000DF0034CEBC /* UIImage+.swift in Sources */,
 				04B38AB4226E9EDD00CDC29A /* MainViewController.swift in Sources */,
 				04C203F022729B720019FA6B /* AudioRepository.swift in Sources */,
@@ -574,6 +593,7 @@
 				04F4EB4D227001B70034CEBC /* Constants.swift in Sources */,
 				04C203FE22729CCF0019FA6B /* AudiosRequest.swift in Sources */,
 				04C203F222729B8E0019FA6B /* Data.swift in Sources */,
+				0402AF4122842D3A0030CC92 /* Timers.swift in Sources */,
 				04C2040422729DFC0019FA6B /* CustomRequestAdapter.swift in Sources */,
 				04F4EB49227000DF0034CEBC /* String+.swift in Sources */,
 				04F4EB50227001CB0034CEBC /* AudioCollectionViewCell.swift in Sources */,
@@ -729,6 +749,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55WF466AZW;
 				INFOPLIST_FILE = SleepSound/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -749,6 +770,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55WF466AZW;
 				INFOPLIST_FILE = SleepSound/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
